@@ -139,7 +139,7 @@ python -m http.server 8000
 - [x] Atualizar experiências com dados reais do LinkedIn/CV
 - [x] Adicionar mais projetos com resultados específicos
 - [x] Criar seção de clientes (logos)
-- [x] Implementar formulário de contato (Formspree configurado)
+- [x] Implementar formulário de contato (Formspree - notificações por email ativas)
 - [x] Adicionar botão Calendly (configurado)
 - [x] Anos de experiência dinâmicos (desde 2016)
 - [x] Adicionar Shoulder na timeline
