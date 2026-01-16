@@ -144,10 +144,24 @@ python -m http.server 8000
 - [x] Anos de experiência dinâmicos (desde 2016)
 - [x] Adicionar Shoulder na timeline
 
+### Próxima Tarefa
+- [ ] **[0] Configurar domínio personalizado**
+
 ### Pendente
-- [ ] Configurar domínio personalizado
 - [ ] Adicionar analytics (Google Analytics ou Plausible)
 - [ ] Adicionar blog/artigos (opcional)
+- [ ] Adicionar seção de certificações/badges
+- [ ] Adicionar depoimentos de clientes (testimonials)
+- [ ] Adicionar botão de download do CV em PDF
+- [ ] Implementar dark/light mode toggle
+- [ ] Adicionar animação de typing no hero (typewriter effect)
+- [ ] Adicionar seção de artigos/publicações técnicas
+- [ ] Integrar com GitHub API para mostrar repos/contribuições
+- [ ] Adicionar mapa de calor de visitantes (analytics avançado)
+- [ ] PWA - permitir instalação como app no celular
+- [ ] Adicionar chat ao vivo (Crisp, Tawk.to, etc.)
+- [ ] Multi-idioma adicional (Espanhol)
+- [ ] Seção de FAQ sobre serviços
 
 ## Tecnologias
 
