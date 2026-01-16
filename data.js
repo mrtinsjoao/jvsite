@@ -5,18 +5,13 @@
    1. Encontre a seção que deseja editar (nav, hero, about, etc.)
    2. Edite o texto em 'en' (inglês) e 'pt' (português)
    3. Salve o arquivo e recarregue a página
-
-   HOW TO EDIT:
-   1. Find the section you want to edit (nav, hero, about, etc.)
-   2. Edit the text in 'en' (English) and 'pt' (Portuguese)
-   3. Save the file and refresh the page
    ========================================================================== */
 
 const siteData = {
     // ==================== CONFIGURAÇÕES / SETTINGS ====================
     config: {
-        defaultLanguage: 'en', // 'en' ou 'pt'
-        whatsapp: '5511999999999', // Seu número com código do país (sem + ou espaços)
+        defaultLanguage: 'en',
+        whatsapp: '5511999999999', // Atualize com seu número
         email: 'mrtins.joao@gmail.com',
         linkedin: 'https://www.linkedin.com/in/mrtinsjoao/',
         github: 'https://github.com/mrtinsjoao'
@@ -45,26 +40,26 @@ const siteData = {
         en: {
             greeting: "Hi, I'm",
             name: 'João Vitor Martins',
-            subtitle: 'Data Architect & Data Engineer',
-            description: 'I transform data into <strong>strategic decisions</strong>. I help companies build robust data infrastructures that generate <strong>real business impact</strong>.',
+            subtitle: 'Lead Data Engineer | Data Architect | Solutions Architect',
+            description: 'I transform data into <strong>strategic decisions</strong>. With over 10 years of experience, I help companies build robust data infrastructures that generate <strong>real business impact</strong>.',
             ctaPrimary: "Let's Talk",
             ctaSecondary: 'View Projects',
             stats: {
-                experience: { number: '+5', label: 'Years of Experience' },
-                projects: { number: '+20', label: 'Projects Delivered' },
+                experience: { number: '+10', label: 'Years of Experience' },
+                projects: { number: '+50', label: 'Projects Delivered' },
                 languages: { number: '3', label: 'Languages' }
             }
         },
         pt: {
             greeting: 'Olá, eu sou',
             name: 'João Vitor Martins',
-            subtitle: 'Arquiteto de Dados & Engenheiro de Dados',
-            description: 'Transformo dados em <strong>decisões estratégicas</strong>. Ajudo empresas a construir infraestruturas de dados robustas que geram <strong>impacto real no negócio</strong>.',
+            subtitle: 'Lead Data Engineer | Data Architect | Solutions Architect',
+            description: 'Transformo dados em <strong>decisões estratégicas</strong>. Com mais de 10 anos de experiência, ajudo empresas a construir infraestruturas de dados robustas que geram <strong>impacto real no negócio</strong>.',
             ctaPrimary: 'Vamos Conversar',
             ctaSecondary: 'Ver Projetos',
             stats: {
-                experience: { number: '+5', label: 'Anos de Experiência' },
-                projects: { number: '+20', label: 'Projetos Entregues' },
+                experience: { number: '+10', label: 'Anos de Experiência' },
+                projects: { number: '+50', label: 'Projetos Entregues' },
                 languages: { number: '3', label: 'Idiomas' }
             }
         }
@@ -76,9 +71,10 @@ const siteData = {
             title: 'About',
             intro: "Nice to meet you! You can call me <strong>JV</strong>.",
             paragraphs: [
-                "I'm a professional passionate about data and technology, with solid experience in <strong>Data Architecture</strong>, <strong>Data Engineering</strong>, and <strong>IT Projects</strong>. Currently, I'm pursuing a <strong>Master's in Business & Technology in Data Science and AI</strong>.",
-                "My mission is to help companies transform their data into strategic assets, building efficient pipelines, scalable architectures, and solutions that truly impact the business.",
-                "I work with companies of different sizes, from startups to multinationals like <strong>Medtronic</strong>, always focusing on delivering measurable value."
+                "I've been working with data for over <strong>10 years</strong>, and if you take a closer look at my profile, you'll find a wide range of valuable experience across different industries - from healthcare and pharma to automotive and manufacturing.",
+                "I'm passionate about solving problems and delivering practical solutions to various challenges. Currently, I work as <strong>Lead Data Engineer at Medtronic</strong> (USA) and also run my own consulting company, <strong>DadosNow</strong>, where I help companies transform their data into competitive advantage.",
+                "My expertise spans <strong>Data Architecture</strong>, <strong>Data Engineering</strong>, <strong>BI & Analytics</strong>, and <strong>Cloud Solutions</strong>. I've worked with companies like Novartis, Hospital Sírio-Libanês, Embraer, Ford, and Fleury.",
+                "I hold an <strong>MBA in Information Technology</strong> from Sirius Educação and a degree in <strong>Science and Technology from UNIFESP</strong>."
             ],
             languagesTitle: 'Languages',
             languages: [
@@ -90,19 +86,19 @@ const siteData = {
             skills: {
                 dataEngineering: {
                     title: 'Data Engineering',
-                    items: ['Python', 'SQL', 'Apache Spark', 'Airflow', 'ETL/ELT', 'Databricks', 'dbt']
+                    items: ['Python', 'SQL', 'Snowflake', 'Databricks', 'AWS Glue', 'Pentaho', 'ETL/ELT']
                 },
                 dataArchitecture: {
                     title: 'Data Architecture',
-                    items: ['Data Modeling', 'Data Warehouse', 'Data Lake', 'Lakehouse', 'Data Mesh', 'Data Governance']
-                },
-                cloudTools: {
-                    title: 'Cloud & Tools',
-                    items: ['AWS', 'Azure', 'GCP', 'Databricks', 'Snowflake', 'Terraform']
+                    items: ['Data Lake', 'Data Warehouse', 'Data Modeling', 'Snowflake', 'AWS Redshift', 'SAP Integration']
                 },
                 biAnalytics: {
                     title: 'BI & Analytics',
-                    items: ['Power BI', 'Qlik', 'Tableau', 'Looker', 'Metabase']
+                    items: ['Qlik Sense', 'QlikView', 'Power BI', 'Tableau', 'Qlik Cloud', 'NPrinting']
+                },
+                cloudTools: {
+                    title: 'Cloud & Tools',
+                    items: ['AWS', 'GCP', 'Snowflake', 'Alteryx', 'SAP BW/4HANA', 'Oracle']
                 }
             }
         },
@@ -110,9 +106,10 @@ const siteData = {
             title: 'Sobre',
             intro: "Prazer, pode me chamar de <strong>JV</strong>.",
             paragraphs: [
-                "Sou um profissional apaixonado por dados e tecnologia, com experiência sólida em <strong>Arquitetura de Dados</strong>, <strong>Engenharia de Dados</strong> e <strong>Projetos de TI</strong>. Atualmente, estou cursando um <strong>Master em Business & Technology em Data Science e IA</strong>.",
-                "Minha missão é ajudar empresas a transformar seus dados em ativos estratégicos, construindo pipelines eficientes, arquiteturas escaláveis e soluções que realmente impactam o negócio.",
-                "Trabalho com empresas de diferentes portes, desde startups até multinacionais como a <strong>Medtronic</strong>, sempre focando em entregar valor mensurável."
+                "Trabalho com dados há mais de <strong>10 anos</strong>, e se você olhar meu perfil de perto, encontrará uma ampla experiência em diferentes indústrias - desde saúde e farmacêutica até automotiva e manufatura.",
+                "Sou apaixonado por resolver problemas e entregar soluções práticas para diversos desafios. Atualmente, trabalho como <strong>Lead Data Engineer na Medtronic</strong> (EUA) e também dirijo minha própria empresa de consultoria, <strong>DadosNow</strong>, onde ajudo empresas a transformar seus dados em vantagem competitiva.",
+                "Minha expertise abrange <strong>Arquitetura de Dados</strong>, <strong>Engenharia de Dados</strong>, <strong>BI & Analytics</strong> e <strong>Soluções Cloud</strong>. Já trabalhei com empresas como Novartis, Hospital Sírio-Libanês, Embraer, Ford e Fleury.",
+                "Possuo <strong>MBA em Tecnologia da Informação</strong> pela Sirius Educação e graduação em <strong>Ciência e Tecnologia pela UNIFESP</strong>."
             ],
             languagesTitle: 'Idiomas',
             languages: [
@@ -124,19 +121,19 @@ const siteData = {
             skills: {
                 dataEngineering: {
                     title: 'Data Engineering',
-                    items: ['Python', 'SQL', 'Apache Spark', 'Airflow', 'ETL/ELT', 'Databricks', 'dbt']
+                    items: ['Python', 'SQL', 'Snowflake', 'Databricks', 'AWS Glue', 'Pentaho', 'ETL/ELT']
                 },
                 dataArchitecture: {
                     title: 'Data Architecture',
-                    items: ['Data Modeling', 'Data Warehouse', 'Data Lake', 'Lakehouse', 'Data Mesh', 'Data Governance']
-                },
-                cloudTools: {
-                    title: 'Cloud & Tools',
-                    items: ['AWS', 'Azure', 'GCP', 'Databricks', 'Snowflake', 'Terraform']
+                    items: ['Data Lake', 'Data Warehouse', 'Data Modeling', 'Snowflake', 'AWS Redshift', 'SAP Integration']
                 },
                 biAnalytics: {
                     title: 'BI & Analytics',
-                    items: ['Power BI', 'Qlik', 'Tableau', 'Looker', 'Metabase']
+                    items: ['Qlik Sense', 'QlikView', 'Power BI', 'Tableau', 'Qlik Cloud', 'NPrinting']
+                },
+                cloudTools: {
+                    title: 'Cloud & Tools',
+                    items: ['AWS', 'GCP', 'Snowflake', 'Alteryx', 'SAP BW/4HANA', 'Oracle']
                 }
             }
         }
@@ -146,82 +143,180 @@ const siteData = {
     experience: {
         en: {
             title: 'Experience',
-            subtitle: 'Professional journey and impacts generated in each project',
-            impactsLabel: 'Impacts:',
+            subtitle: 'Professional journey and impacts generated across industries',
+            impactsLabel: 'Key Contributions:',
             timeline: [
                 {
                     company: 'Medtronic',
-                    role: 'Data Architect / Data Engineer',
-                    period: 'Current',
-                    description: 'Leading data architecture initiatives at one of the largest medical technology companies in the world.',
+                    role: 'Lead Data Engineer',
+                    period: 'Jun 2025 - Present',
+                    location: 'United States',
+                    description: 'Leading data engineering initiatives at one of the largest medical technology companies in the world.',
                     impacts: [
-                        'Implementation of modern data architecture',
-                        'Optimization of critical data pipelines',
-                        'Standardization of data governance processes'
+                        'Creating and managing pipelines in Snowflake environment',
+                        'Designing and structuring data engineering projects',
+                        'Building dataflows in Power BI with Microsoft API integrations',
+                        'Connecting SAP tables (SAP BW, SAC, Datasphere) - Creating FACT and DIM tables',
+                        'Leading Data Engineering for Operations Innovation team'
                     ]
                 },
                 {
-                    company: 'Consulting Projects',
-                    role: 'Data Consultant',
-                    period: 'Ongoing',
-                    description: 'Specialized consulting for companies seeking to transform their data into competitive advantage.',
+                    company: 'DadosNow',
+                    role: 'IT Director / Solutions Architect',
+                    period: 'Nov 2021 - Present',
+                    location: 'São Paulo, Brazil',
+                    description: 'Founder and director of my own consulting company, delivering data solutions to enterprise clients.',
                     impacts: [
-                        'Operational cost reduction in data processing',
-                        'Implementation of BI and Analytics solutions',
-                        'Design of cloud-native architectures'
+                        '<strong>Solidaridad:</strong> Designed and implemented new Data Lake architecture with AWS Glue and Athena',
+                        '<strong>Fleury:</strong> Led restructuring and unification of Pardini and Fleury environments after merger',
+                        '<strong>Ford LATAM:</strong> Delivered analytics solutions for global teams, built unified KPI dashboard for Brazil and Argentina',
+                        '<strong>Vipal:</strong> Managed QlikView environments, restructured license usage reducing contract costs',
+                        '<strong>Novartis:</strong> Various data projects and environment management'
                     ]
                 },
                 {
-                    company: 'Previous Experience',
-                    role: 'Data Engineer / BI Developer',
-                    period: '2019 - 2023',
-                    description: 'Development of data solutions for companies in the São Paulo and São José dos Campos regions.',
+                    company: 'Novartis Brasil',
+                    role: 'Data Architect',
+                    period: 'Jul 2023 - Jun 2025',
+                    location: 'São Paulo, Brazil',
+                    description: 'Solution Architect leading global data projects and managing BI environments.',
                     impacts: [
-                        'Building data warehouses from scratch',
-                        'ETL process automation',
-                        'Development of executive dashboards',
-                        'Training and mentoring teams'
+                        'Led implementation of global data project using Snowflake',
+                        'Collaborated with global team to make new data available across systems',
+                        'Managed Qlik Sense and Power BI environments',
+                        'Developed market distribution monitoring applications with Business Insights team',
+                        'Processed and optimized IQVIA data with local business rules and dashboards'
+                    ]
+                },
+                {
+                    company: 'Hospital Sírio-Libanês',
+                    role: 'Data Specialist',
+                    period: 'Oct 2021 - Jul 2023',
+                    location: 'São Paulo, Brazil',
+                    description: 'Led innovative BI projects and cloud migrations at one of Latin Americas top hospitals.',
+                    impacts: [
+                        'Led development of BI projects using Power BI and Qlik Sense',
+                        'Planned and executed QlikView/Qlik Sense server migrations',
+                        'Oversaw complete migration from QlikView/Qlik Sense to Power BI',
+                        'Designed new table structures in AWS Redshift as Data Engineer',
+                        'Led intercloud migration from AWS to Oracle Cloud Infrastructure (OCI)'
+                    ]
+                },
+                {
+                    company: 'SONDA',
+                    role: 'Senior Data Analyst / Tech Lead',
+                    period: 'Sep 2019 - Jul 2021',
+                    location: 'São José dos Campos, Brazil',
+                    description: 'Tech Lead at consulting firm specialized in Qlik, responsible for project prioritization and delivery.',
+                    impacts: [
+                        '<strong>Embraer/Boeing Carveout:</strong> Led Qlik environment split and data cleaning',
+                        '<strong>MFA Server Consolidation:</strong> Unified 48 AD MFA servers in 5 days (planned for 3 months)',
+                        'Designed ETL processes using Pentaho for complex Data Warehouse environments',
+                        'Delivered data integration projects using SAP ECC/4HANA tables',
+                        'Built Power BI dashboards with real-time SQL integrations'
+                    ]
+                },
+                {
+                    company: 'Embraer',
+                    role: 'IT Intern (Data Analyst)',
+                    period: 'Oct 2017 - Dec 2018',
+                    location: 'São José dos Campos, Brazil',
+                    description: 'Started my data career at one of the worlds largest aircraft manufacturers.',
+                    impacts: [
+                        'Developed BI applications using QlikView',
+                        'Managed and supported Oracle Databases',
+                        'Created automation robots in VBS and C#',
+                        'Supported PHP and JavaScript portal development'
                     ]
                 }
             ]
         },
         pt: {
             title: 'Experiência',
-            subtitle: 'Trajetória profissional e impactos gerados em cada projeto',
-            impactsLabel: 'Impactos:',
+            subtitle: 'Trajetória profissional e impactos gerados em diferentes indústrias',
+            impactsLabel: 'Principais Contribuições:',
             timeline: [
                 {
                     company: 'Medtronic',
-                    role: 'Data Architect / Data Engineer',
-                    period: 'Atual',
-                    description: 'Liderando iniciativas de arquitetura de dados em uma das maiores empresas de tecnologia médica do mundo.',
+                    role: 'Lead Data Engineer',
+                    period: 'Jun 2025 - Presente',
+                    location: 'Estados Unidos',
+                    description: 'Liderando iniciativas de engenharia de dados em uma das maiores empresas de tecnologia médica do mundo.',
                     impacts: [
-                        'Implementação de arquitetura de dados moderna',
-                        'Otimização de pipelines de dados críticos',
-                        'Padronização de processos de governança de dados'
+                        'Criação e gestão de pipelines em ambiente Snowflake',
+                        'Design e estruturação de projetos de engenharia de dados',
+                        'Construção de dataflows no Power BI com integrações de API Microsoft',
+                        'Conexão com tabelas SAP (SAP BW, SAC, Datasphere) - Criação de tabelas FACT e DIM',
+                        'Liderança de Data Engineering para time de Operations Innovation'
                     ]
                 },
                 {
-                    company: 'Projetos de Consultoria',
-                    role: 'Consultor de Dados',
-                    period: 'Ongoing',
-                    description: 'Consultoria especializada para empresas que buscam transformar seus dados em vantagem competitiva.',
+                    company: 'DadosNow',
+                    role: 'Diretor de TI / Arquiteto de Soluções',
+                    period: 'Nov 2021 - Presente',
+                    location: 'São Paulo, Brasil',
+                    description: 'Fundador e diretor da minha própria empresa de consultoria, entregando soluções de dados para clientes enterprise.',
                     impacts: [
-                        'Redução de custos operacionais em processamento de dados',
-                        'Implementação de soluções de BI e Analytics',
-                        'Desenho de arquiteturas cloud-native'
+                        '<strong>Solidaridad:</strong> Projetei e implementei nova arquitetura de Data Lake com AWS Glue e Athena',
+                        '<strong>Fleury:</strong> Liderei reestruturação e unificação dos ambientes Pardini e Fleury após fusão',
+                        '<strong>Ford LATAM:</strong> Entreguei soluções analytics para times globais, construí dashboard KPI unificado Brasil/Argentina',
+                        '<strong>Vipal:</strong> Gerenciei ambientes QlikView, reestruturei uso de licenças reduzindo custos',
+                        '<strong>Novartis:</strong> Diversos projetos de dados e gestão de ambientes'
                     ]
                 },
                 {
-                    company: 'Experiências Anteriores',
-                    role: 'Data Engineer / BI Developer',
-                    period: '2019 - 2023',
-                    description: 'Desenvolvimento de soluções de dados em empresas da região de São Paulo e São José dos Campos.',
+                    company: 'Novartis Brasil',
+                    role: 'Data Architect',
+                    period: 'Jul 2023 - Jun 2025',
+                    location: 'São Paulo, Brasil',
+                    description: 'Arquiteto de Soluções liderando projetos globais de dados e gerenciando ambientes de BI.',
                     impacts: [
-                        'Construção de data warehouses do zero',
-                        'Automação de processos de ETL',
-                        'Desenvolvimento de dashboards executivos',
-                        'Treinamento e mentoria de equipes'
+                        'Liderei implementação de projeto global de dados usando Snowflake',
+                        'Colaborei com time global para disponibilizar novos dados entre sistemas',
+                        'Gerenciei ambientes Qlik Sense e Power BI',
+                        'Desenvolvi aplicações de monitoramento de distribuição de mercado com time de Business Insights',
+                        'Processei e otimizei dados IQVIA com regras de negócio locais e dashboards'
+                    ]
+                },
+                {
+                    company: 'Hospital Sírio-Libanês',
+                    role: 'Data Specialist',
+                    period: 'Out 2021 - Jul 2023',
+                    location: 'São Paulo, Brasil',
+                    description: 'Liderei projetos inovadores de BI e migrações cloud em um dos maiores hospitais da América Latina.',
+                    impacts: [
+                        'Liderei desenvolvimento de projetos de BI usando Power BI e Qlik Sense',
+                        'Planejei e executei migrações de servidores QlikView/Qlik Sense',
+                        'Supervisionei migração completa de QlikView/Qlik Sense para Power BI',
+                        'Projetei novas estruturas de tabelas no AWS Redshift como Data Engineer',
+                        'Liderei migração intercloud de AWS para Oracle Cloud Infrastructure (OCI)'
+                    ]
+                },
+                {
+                    company: 'SONDA',
+                    role: 'Senior Data Analyst / Tech Lead',
+                    period: 'Set 2019 - Jul 2021',
+                    location: 'São José dos Campos, Brasil',
+                    description: 'Tech Lead em consultoria especializada em Qlik, responsável por priorização e entrega de projetos.',
+                    impacts: [
+                        '<strong>Embraer/Boeing Carveout:</strong> Liderei separação de ambiente Qlik e limpeza de dados',
+                        '<strong>Consolidação Servidores MFA:</strong> Unifiquei 48 servidores AD MFA em 5 dias (planejado para 3 meses)',
+                        'Projetei processos ETL usando Pentaho para ambientes complexos de Data Warehouse',
+                        'Entreguei projetos de integração de dados usando tabelas SAP ECC/4HANA',
+                        'Construí dashboards Power BI com integrações SQL em tempo real'
+                    ]
+                },
+                {
+                    company: 'Embraer',
+                    role: 'Estagiário de TI (Data Analyst)',
+                    period: 'Out 2017 - Dez 2018',
+                    location: 'São José dos Campos, Brasil',
+                    description: 'Iniciei minha carreira em dados em uma das maiores fabricantes de aeronaves do mundo.',
+                    impacts: [
+                        'Desenvolvi aplicações de BI usando QlikView',
+                        'Gerenciei e dei suporte a Bancos de Dados Oracle',
+                        'Criei robôs de automação em VBS e C#',
+                        'Suportei desenvolvimento de portal PHP e JavaScript'
                     ]
                 }
             ]
@@ -232,71 +327,99 @@ const siteData = {
     projects: {
         en: {
             title: 'Projects',
-            subtitle: 'Some projects I developed and the results achieved',
+            subtitle: 'Key projects delivered and measurable results achieved',
             resultLabel: 'Result:',
             items: [
                 {
                     icon: 'lakehouse',
-                    title: 'Data Lakehouse Architecture',
-                    description: 'Modern architecture combining Data Lake and Data Warehouse for real-time analytics.',
-                    tags: ['Databricks', 'Delta Lake', 'Spark', 'AWS'],
-                    result: '60% reduction in processing time'
+                    title: 'Global Data Platform - Snowflake',
+                    description: 'Led implementation of enterprise data platform at Novartis, integrating global data sources and enabling cross-system analytics.',
+                    tags: ['Snowflake', 'SAP', 'Power BI', 'Global'],
+                    result: 'Unified data access for global teams'
                 },
                 {
                     icon: 'pipeline',
-                    title: 'Cloud Data Pipeline',
-                    description: 'Development of automated and scalable data pipelines in cloud environment.',
-                    tags: ['AWS', 'Airflow', 'Python', 'Terraform'],
-                    result: 'R$ 50k/month savings in infrastructure'
+                    title: 'Data Lake Architecture - AWS',
+                    description: 'Designed and implemented new Data Lake architecture for Solidaridad with Python automation, AWS Glue ETL pipelines, and Athena queries.',
+                    tags: ['AWS Glue', 'Athena', 'Python', 'S3'],
+                    result: 'Complete data infrastructure from scratch'
                 },
                 {
                     icon: 'bi',
-                    title: 'BI & Analytics Platform',
-                    description: 'Complete Business Intelligence platform for strategic decision making.',
-                    tags: ['Qlik', 'Power BI', 'SQL', 'Data Modeling'],
-                    result: '+30% operational efficiency'
+                    title: 'Fleury + Pardini Merger',
+                    description: 'Led the restructuring and unification of Qlik Sense and Qlik Cloud environments after the merger of two major healthcare companies.',
+                    tags: ['Qlik Sense', 'Qlik Cloud', 'Migration', 'Healthcare'],
+                    result: 'Unified analytics environment post-merger'
                 },
                 {
                     icon: 'governance',
-                    title: 'Data Governance Framework',
-                    description: 'Implementation of data governance framework to ensure quality and compliance.',
-                    tags: ['Data Quality', 'LGPD', 'Cataloging', 'Lineage'],
-                    result: '100% regulatory compliance'
+                    title: 'MFA Server Consolidation',
+                    description: 'Successfully unified 48 Active Directory MFA servers into a single environment at SONDA/Embraer.',
+                    tags: ['Infrastructure', 'Active Directory', 'Security'],
+                    result: 'Delivered in 5 days (planned for 3 months)'
+                },
+                {
+                    icon: 'bi',
+                    title: 'Ford LATAM Analytics',
+                    description: 'Developed unified KPI dashboard for dealerships across Brazil and Argentina with credential-based access portal.',
+                    tags: ['Qlik Sense', 'Qlik Cloud', 'KPIs', 'LATAM'],
+                    result: 'Analytics for global teams BR/AR'
+                },
+                {
+                    icon: 'pipeline',
+                    title: 'Cloud Migration AWS to OCI',
+                    description: 'Led intercloud server migration from AWS to Oracle Cloud Infrastructure at Hospital Sírio-Libanês with zero downtime.',
+                    tags: ['AWS', 'OCI', 'Migration', 'Healthcare'],
+                    result: 'Seamless migration with high availability'
                 }
             ]
         },
         pt: {
             title: 'Projetos',
-            subtitle: 'Alguns projetos que desenvolvi e os resultados alcançados',
+            subtitle: 'Principais projetos entregues e resultados mensuráveis alcançados',
             resultLabel: 'Resultado:',
             items: [
                 {
                     icon: 'lakehouse',
-                    title: 'Arquitetura Data Lakehouse',
-                    description: 'Arquitetura moderna combinando Data Lake e Data Warehouse para analytics em tempo real.',
-                    tags: ['Databricks', 'Delta Lake', 'Spark', 'AWS'],
-                    result: 'Redução de 60% no tempo de processamento'
+                    title: 'Plataforma Global de Dados - Snowflake',
+                    description: 'Liderei implementação de plataforma de dados enterprise na Novartis, integrando fontes de dados globais e habilitando analytics cross-system.',
+                    tags: ['Snowflake', 'SAP', 'Power BI', 'Global'],
+                    result: 'Acesso unificado de dados para times globais'
                 },
                 {
                     icon: 'pipeline',
-                    title: 'Pipeline de Dados em Cloud',
-                    description: 'Desenvolvimento de pipelines de dados automatizados e escaláveis em ambiente cloud.',
-                    tags: ['AWS', 'Airflow', 'Python', 'Terraform'],
-                    result: 'Economia de R$ 50k/mês em infraestrutura'
+                    title: 'Arquitetura Data Lake - AWS',
+                    description: 'Projetei e implementei nova arquitetura de Data Lake para Solidaridad com automação Python, pipelines ETL AWS Glue e queries Athena.',
+                    tags: ['AWS Glue', 'Athena', 'Python', 'S3'],
+                    result: 'Infraestrutura de dados completa do zero'
                 },
                 {
                     icon: 'bi',
-                    title: 'Plataforma de BI & Analytics',
-                    description: 'Plataforma completa de Business Intelligence para tomada de decisão estratégica.',
-                    tags: ['Qlik', 'Power BI', 'SQL', 'Data Modeling'],
-                    result: '+30% em eficiência operacional'
+                    title: 'Fusão Fleury + Pardini',
+                    description: 'Liderei reestruturação e unificação dos ambientes Qlik Sense e Qlik Cloud após fusão de duas grandes empresas de saúde.',
+                    tags: ['Qlik Sense', 'Qlik Cloud', 'Migração', 'Saúde'],
+                    result: 'Ambiente analytics unificado pós-fusão'
                 },
                 {
                     icon: 'governance',
-                    title: 'Framework de Data Governance',
-                    description: 'Implementação de framework de governança de dados para garantir qualidade e compliance.',
-                    tags: ['Data Quality', 'LGPD', 'Cataloging', 'Lineage'],
-                    result: '100% de conformidade regulatória'
+                    title: 'Consolidação Servidores MFA',
+                    description: 'Unifiquei com sucesso 48 servidores Active Directory MFA em um único ambiente na SONDA/Embraer.',
+                    tags: ['Infraestrutura', 'Active Directory', 'Segurança'],
+                    result: 'Entregue em 5 dias (planejado para 3 meses)'
+                },
+                {
+                    icon: 'bi',
+                    title: 'Ford LATAM Analytics',
+                    description: 'Desenvolvi dashboard KPI unificado para concessionárias no Brasil e Argentina com portal de acesso baseado em credenciais.',
+                    tags: ['Qlik Sense', 'Qlik Cloud', 'KPIs', 'LATAM'],
+                    result: 'Analytics para times globais BR/AR'
+                },
+                {
+                    icon: 'pipeline',
+                    title: 'Migração Cloud AWS para OCI',
+                    description: 'Liderei migração intercloud de servidores de AWS para Oracle Cloud Infrastructure no Hospital Sírio-Libanês com zero downtime.',
+                    tags: ['AWS', 'OCI', 'Migração', 'Saúde'],
+                    result: 'Migração seamless com alta disponibilidade'
                 }
             ]
         }
@@ -323,11 +446,11 @@ const siteData = {
                 },
                 {
                     icon: 'company',
-                    title: 'Through My Company',
-                    description: 'Hiring through my consulting company for structured projects.',
+                    title: 'Via DadosNow',
+                    description: 'Hiring through my consulting company for structured data projects.',
                     benefits: [
-                        'Specialized team',
                         'Proven methodology',
+                        'Enterprise experience',
                         'Delivery with defined SLA',
                         'Contractual flexibility'
                     ],
@@ -353,23 +476,23 @@ const siteData = {
             differentials: [
                 {
                     number: '01',
-                    title: 'Proven Experience',
-                    description: 'Years of experience in data projects for companies of various sizes and segments.'
+                    title: '+10 Years Experience',
+                    description: 'Extensive experience across healthcare, pharma, automotive, and manufacturing industries.'
                 },
                 {
                     number: '02',
-                    title: 'Results Focused',
-                    description: 'Every project is guided by clear metrics and measurable business impact.'
+                    title: 'Enterprise Track Record',
+                    description: 'Delivered projects for Medtronic, Novartis, Embraer, Ford, Fleury, and Hospital Sírio-Libanês.'
                 },
                 {
                     number: '03',
-                    title: 'End-to-End Vision',
-                    description: 'From architecture to implementation, I deliver complete and functional solutions.'
+                    title: 'End-to-End Solutions',
+                    description: 'From Data Architecture to BI & Analytics - complete data solutions that drive business value.'
                 },
                 {
                     number: '04',
-                    title: 'Clear Communication',
-                    description: 'I translate technical complexity into business language for stakeholders.'
+                    title: 'Global Experience',
+                    description: 'Working with global teams, multilingual (PT/EN/ES), and understanding of international business.'
                 }
             ],
             ctaTitle: 'Ready to transform your data into results?',
@@ -397,11 +520,11 @@ const siteData = {
                 },
                 {
                     icon: 'company',
-                    title: 'Via Minha Empresa',
-                    description: 'Contratação através da minha empresa de consultoria para projetos estruturados.',
+                    title: 'Via DadosNow',
+                    description: 'Contratação através da minha empresa de consultoria para projetos estruturados de dados.',
                     benefits: [
-                        'Equipe especializada',
                         'Metodologia comprovada',
+                        'Experiência enterprise',
                         'Entrega com SLA definido',
                         'Flexibilidade contratual'
                     ],
@@ -427,23 +550,23 @@ const siteData = {
             differentials: [
                 {
                     number: '01',
-                    title: 'Experiência Comprovada',
-                    description: 'Anos de experiência em projetos de dados para empresas de diversos portes e segmentos.'
+                    title: '+10 Anos de Experiência',
+                    description: 'Ampla experiência em indústrias de saúde, farmacêutica, automotiva e manufatura.'
                 },
                 {
                     number: '02',
-                    title: 'Foco em Resultados',
-                    description: 'Cada projeto é orientado a métricas claras e impacto mensurável no negócio.'
+                    title: 'Track Record Enterprise',
+                    description: 'Projetos entregues para Medtronic, Novartis, Embraer, Ford, Fleury e Hospital Sírio-Libanês.'
                 },
                 {
                     number: '03',
-                    title: 'Visão End-to-End',
-                    description: 'Da arquitetura à implementação, entrego soluções completas e funcionais.'
+                    title: 'Soluções End-to-End',
+                    description: 'De Arquitetura de Dados a BI & Analytics - soluções completas que geram valor ao negócio.'
                 },
                 {
                     number: '04',
-                    title: 'Comunicação Clara',
-                    description: 'Traduzo complexidade técnica em linguagem de negócio para stakeholders.'
+                    title: 'Experiência Global',
+                    description: 'Trabalho com times globais, multilíngue (PT/EN/ES) e entendimento de negócios internacionais.'
                 }
             ],
             ctaTitle: 'Pronto para transformar seus dados em resultados?',
