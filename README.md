@@ -147,21 +147,28 @@ python -m http.server 8000
 ### Próxima Tarefa
 - [ ] **[0] Configurar domínio personalizado**
 
-### Pendente
-- [ ] Adicionar analytics (Google Analytics ou Plausible)
-- [ ] Adicionar blog/artigos (opcional)
-- [ ] Adicionar seção de certificações/badges
-- [ ] Adicionar depoimentos de clientes (testimonials)
-- [ ] Adicionar botão de download do CV em PDF
-- [ ] Implementar dark/light mode toggle
-- [ ] Adicionar animação de typing no hero (typewriter effect)
-- [ ] Adicionar seção de artigos/publicações técnicas
-- [ ] Integrar com GitHub API para mostrar repos/contribuições
-- [ ] Adicionar mapa de calor de visitantes (analytics avançado)
-- [ ] PWA - permitir instalação como app no celular
-- [ ] Adicionar chat ao vivo (Crisp, Tawk.to, etc.)
-- [ ] Multi-idioma adicional (Espanhol)
-- [ ] Seção de FAQ sobre serviços
+### Pendente - Alto Impacto (Conversão)
+| Melhoria | Descrição |
+|----------|-----------|
+| Depoimentos | Quotes de clientes satisfeitos aumentam credibilidade |
+| Download CV | Botão para baixar seu CV em PDF |
+| Chat ao vivo | Crisp/Tawk.to grátis - atendimento imediato |
+| Certificações | AWS, Snowflake badges mostram expertise |
+
+### Pendente - Médio Impacto (Engajamento)
+| Melhoria | Descrição |
+|----------|-----------|
+| Analytics | Entender quem visita e de onde vem |
+| Typewriter | Animação no hero chamativa |
+| GitHub API | Mostrar seus repos e contribuições |
+| Multi-idioma ES | Você fala espanhol, abre mercado LATAM |
+
+### Pendente - Longo Prazo (Autoridade)
+| Melhoria | Descrição |
+|----------|-----------|
+| Blog/Artigos | SEO + posicionamento como especialista |
+| PWA | Site instalável como app |
+| Dark/Light toggle | Preferência do usuário |
 
 ## Tecnologias
 
