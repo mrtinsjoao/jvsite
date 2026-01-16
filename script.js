@@ -532,3 +532,58 @@ function animateCounters() {
 
 // Initialize counter animation
 document.addEventListener('DOMContentLoaded', animateCounters);
+
+/* --------------------------------------------------------------------------
+   Contact Form Submission
+   -------------------------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const submitBtn = form.querySelector('.btn-submit');
+            const originalText = submitBtn.innerHTML;
+
+            // Show loading state
+            submitBtn.innerHTML = '<span>Sending...</span>';
+            submitBtn.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    status.textContent = currentLang === 'pt'
+                        ? 'Mensagem enviada com sucesso!'
+                        : 'Message sent successfully!';
+                    status.className = 'form-status success';
+                    form.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                status.textContent = currentLang === 'pt'
+                    ? 'Erro ao enviar. Tente novamente.'
+                    : 'Error sending. Please try again.';
+                status.className = 'form-status error';
+            }
+
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+
+            // Clear status after 5 seconds
+            setTimeout(() => {
+                status.textContent = '';
+                status.className = 'form-status';
+            }, 5000);
+        });
+    }
+});

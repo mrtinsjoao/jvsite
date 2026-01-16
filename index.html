@@ -208,6 +208,8 @@
                     <div class="contact-form-container">
                         <h4 data-i18n="workTogether.formTitle">Or send me a message</h4>
                         <form id="contact-form" action="https://formspree.io/f/mlgggjlz" method="POST" class="contact-form">
+                            <input type="hidden" name="_subject" value="Novo contato do site JV Martins">
+                            <input type="text" name="_gotcha" style="display:none">
                             <div class="form-group">
                                 <input type="text" name="name" required placeholder="Your Name" data-i18n-placeholder="workTogether.formName">
                             </div>
@@ -223,6 +225,7 @@
                             <button type="submit" class="btn btn-primary btn-submit">
                                 <span data-i18n="workTogether.formSubmit">Send Message</span>
                             </button>
+                            <p id="form-status" class="form-status"></p>
                         </form>
                     </div>
                 </div>
