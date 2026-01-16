@@ -11,7 +11,7 @@ const siteData = {
     // ==================== CONFIGURAÇÕES / SETTINGS ====================
     config: {
         defaultLanguage: 'en',
-        whatsapp: '5511999999999', // Atualize com seu número
+        whatsapp: '5512980335073',
         email: 'mrtins.joao@gmail.com',
         linkedin: 'https://www.linkedin.com/in/mrtinsjoao/',
         github: 'https://github.com/mrtinsjoao'
@@ -204,7 +204,7 @@ const siteData = {
                 },
                 {
                     company: 'SONDA',
-                    role: 'Senior Data Analyst / Tech Lead',
+                    role: 'Analytics Senior',
                     period: 'Sep 2019 - Jul 2021',
                     location: 'São José dos Campos, Brazil',
                     description: 'Tech Lead at consulting firm specialized in Qlik, responsible for project prioritization and delivery.',
@@ -214,6 +214,19 @@ const siteData = {
                         'Designed ETL processes using Pentaho for complex Data Warehouse environments',
                         'Delivered data integration projects using SAP ECC/4HANA tables',
                         'Built Power BI dashboards with real-time SQL integrations'
+                    ]
+                },
+                {
+                    company: 'Uniodonto São José dos Campos',
+                    role: 'Business Data Analyst',
+                    period: 'Dec 2018 - Sep 2019',
+                    location: 'São José dos Campos, Brazil',
+                    description: 'Led BI initiatives and process optimization at one of the largest dental cooperatives in the region.',
+                    impacts: [
+                        'Developed applications and KPIs using QlikView and Qlik Sense',
+                        'Administered QlikView and Qlik Sense servers',
+                        'Led process optimization initiatives using QlikView',
+                        '<strong>Key Achievement:</strong> Delivered a high-impact project generating R$ 250,000 in immediate business value'
                     ]
                 },
                 {
@@ -294,7 +307,7 @@ const siteData = {
                 },
                 {
                     company: 'SONDA',
-                    role: 'Senior Data Analyst / Tech Lead',
+                    role: 'Analytics Senior',
                     period: 'Set 2019 - Jul 2021',
                     location: 'São José dos Campos, Brasil',
                     description: 'Tech Lead em consultoria especializada em Qlik, responsável por priorização e entrega de projetos.',
@@ -304,6 +317,19 @@ const siteData = {
                         'Projetei processos ETL usando Pentaho para ambientes complexos de Data Warehouse',
                         'Entreguei projetos de integração de dados usando tabelas SAP ECC/4HANA',
                         'Construí dashboards Power BI com integrações SQL em tempo real'
+                    ]
+                },
+                {
+                    company: 'Uniodonto São José dos Campos',
+                    role: 'Business Data Analyst',
+                    period: 'Dez 2018 - Set 2019',
+                    location: 'São José dos Campos, Brasil',
+                    description: 'Liderei iniciativas de BI e otimização de processos em uma das maiores cooperativas odontológicas da região.',
+                    impacts: [
+                        'Desenvolvi aplicações e KPIs usando QlikView e Qlik Sense',
+                        'Administrei servidores QlikView e Qlik Sense',
+                        'Liderei iniciativas de otimização de processos usando QlikView',
+                        '<strong>Destaque:</strong> Entreguei projeto de alto impacto gerando R$ 250.000 em valor imediato ao negócio'
                     ]
                 },
                 {
@@ -340,9 +366,9 @@ const siteData = {
                 {
                     icon: 'pipeline',
                     title: 'Data Lake Architecture - AWS',
-                    description: 'Designed and implemented new Data Lake architecture for Solidaridad with Python automation, AWS Glue ETL pipelines, and Athena queries.',
+                    description: 'Designed the complete technical solution and led the implementation of a new Data Lake architecture for Solidaridad, including Python automation, AWS Glue ETL pipelines, and Athena queries.',
                     tags: ['AWS Glue', 'Athena', 'Python', 'S3'],
-                    result: 'Complete data infrastructure from scratch'
+                    result: 'End-to-end technical design and implementation'
                 },
                 {
                     icon: 'bi',
@@ -389,9 +415,9 @@ const siteData = {
                 {
                     icon: 'pipeline',
                     title: 'Arquitetura Data Lake - AWS',
-                    description: 'Projetei e implementei nova arquitetura de Data Lake para Solidaridad com automação Python, pipelines ETL AWS Glue e queries Athena.',
+                    description: 'Desenhei toda a solução técnica e liderei a implementação de uma nova arquitetura de Data Lake para Solidaridad, incluindo automação Python, pipelines ETL AWS Glue e queries Athena.',
                     tags: ['AWS Glue', 'Athena', 'Python', 'S3'],
-                    result: 'Infraestrutura de dados completa do zero'
+                    result: 'Design técnico e implementação end-to-end'
                 },
                 {
                     icon: 'bi',
