@@ -358,6 +358,12 @@ ul {
     transform: translateX(-50%);
 }
 
+@media (max-width: 768px) {
+    .hero-scroll {
+        display: none;
+    }
+}
+
 .scroll-indicator {
     display: flex;
     flex-direction: column;
@@ -1226,5 +1232,157 @@ ul {
         right: 16px;
         width: 50px;
         height: 50px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Clients Section
+   -------------------------------------------------------------------------- */
+.clients {
+    background: var(--color-bg-primary);
+    padding: 80px 0;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.client-logo {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-medium);
+    min-height: 100px;
+}
+
+.client-logo:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.client-logo span {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-align: center;
+}
+
+.client-logo:hover span {
+    color: var(--color-text-primary);
+}
+
+@media (max-width: 1024px) {
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .client-logo {
+        padding: 24px 16px;
+        min-height: 80px;
+    }
+
+    .client-logo span {
+        font-size: 0.9375rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Contact Form
+   -------------------------------------------------------------------------- */
+.contact-options {
+    margin-top: 40px;
+}
+
+.contact-form-container {
+    margin-top: 48px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form-container h4 {
+    font-size: 1.125rem;
+    margin-bottom: 24px;
+    color: var(--color-text-secondary);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 18px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text-primary);
+    font-family: var(--font-family);
+    font-size: 0.9375rem;
+    transition: all var(--transition-fast);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-text-muted);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-light);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* Calendly Button */
+.btn-calendly {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+.btn-calendly:hover {
+    background: var(--color-accent);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .contact-form-container {
+        margin-top: 32px;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
     }
 }

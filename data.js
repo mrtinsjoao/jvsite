@@ -14,7 +14,8 @@ const siteData = {
         whatsapp: '5512981335073',
         email: 'mrtins.joao@gmail.com',
         linkedin: 'https://www.linkedin.com/in/mrtinsjoao/',
-        github: 'https://github.com/mrtinsjoao'
+        github: 'https://github.com/mrtinsjoao',
+        calendly: 'https://calendly.com/mrtins-joao/30min' // Update with your Calendly link
     },
 
     // ==================== NAVEGAÇÃO / NAVIGATION ====================
@@ -45,7 +46,7 @@ const siteData = {
             ctaPrimary: "Let's Talk",
             ctaSecondary: 'View Projects',
             stats: {
-                experience: { number: '+10', label: 'Years of Experience' },
+                experience: { number: 'dynamic', label: 'Years of Experience', startYear: 2016 },
                 projects: { number: '+50', label: 'Projects Delivered' },
                 languages: { number: '3', label: 'Languages' }
             }
@@ -58,7 +59,7 @@ const siteData = {
             ctaPrimary: 'Vamos Conversar',
             ctaSecondary: 'Ver Projetos',
             stats: {
-                experience: { number: '+10', label: 'Anos de Experiência' },
+                experience: { number: 'dynamic', label: 'Anos de Experiência', startYear: 2016 },
                 projects: { number: '+50', label: 'Projetos Entregues' },
                 languages: { number: '3', label: 'Idiomas' }
             }
@@ -168,6 +169,7 @@ const siteData = {
                     description: 'Founder and director of my own consulting company, delivering data solutions to enterprise clients.',
                     impacts: [
                         '<strong>Prime Energy (Shell Company) - Data Architect:</strong> Designed complete Data Lake architecture using Medallion model (Bronze/Silver/Gold). Led implementation project and coordinated developer team. CI/CD and Kanban/Scrum methodologies. Built foundation for future AI, Machine Learning, and API integrations',
+                        '<strong>Shoulder (Fashion Retail):</strong> Data architecture and analytics solutions for one of Brazil\'s largest fashion retailers',
                         '<strong>Solidaridad:</strong> Designed and implemented new Data Lake architecture with AWS Glue and Athena',
                         '<strong>Fleury:</strong> Led restructuring and unification of Pardini and Fleury environments after merger',
                         '<strong>Ford LATAM:</strong> Delivered analytics solutions for global teams, built unified KPI dashboard for Brazil and Argentina',
@@ -271,6 +273,7 @@ const siteData = {
                     description: 'Fundador e diretor da minha própria empresa de consultoria, entregando soluções de dados para clientes enterprise.',
                     impacts: [
                         '<strong>Prime Energy (Shell Company) - Data Architect:</strong> Desenhei arquitetura completa de Data Lake utilizando modelo Medallion (Bronze/Silver/Gold). Liderei projeto de implantação e coordenei equipe de desenvolvedores. CI/CD e utilização Kanban e Scrum. Construí fundação para futuras integrações de IA, Machine Learning e APIs',
+                        '<strong>Shoulder (Fashion Retail):</strong> Arquitetura de dados e soluções analytics para uma das maiores varejistas de moda do Brasil',
                         '<strong>Solidaridad:</strong> Projetei e implementei nova arquitetura de Data Lake com AWS Glue e Athena',
                         '<strong>Fleury:</strong> Liderei reestruturação e unificação dos ambientes Pardini e Fleury após fusão',
                         '<strong>Ford LATAM:</strong> Entreguei soluções analytics para times globais, construí dashboard KPI unificado Brasil/Argentina',
@@ -451,6 +454,18 @@ const siteData = {
         }
     },
 
+    // ==================== CLIENTS ====================
+    clients: {
+        en: {
+            title: 'Trusted By',
+            subtitle: 'Companies I\'ve worked with'
+        },
+        pt: {
+            title: 'Empresas que Confiam',
+            subtitle: 'Empresas com as quais trabalhei'
+        }
+    },
+
     // ==================== WORK TOGETHER ====================
     workTogether: {
         en: {
@@ -524,8 +539,15 @@ const siteData = {
             ctaTitle: 'Ready to transform your data into results?',
             ctaDescription: "Let's talk about how I can help your business grow with data.",
             ctaWhatsapp: 'WhatsApp',
+            ctaSchedule: 'Schedule a Call',
             ctaEmail: 'Email',
-            ctaLinkedIn: 'LinkedIn'
+            ctaLinkedIn: 'LinkedIn',
+            formTitle: 'Or send me a message',
+            formName: 'Your Name',
+            formEmail: 'Your Email',
+            formCompany: 'Company (optional)',
+            formMessage: 'How can I help you?',
+            formSubmit: 'Send Message'
         },
         pt: {
             title: 'Como Podemos Trabalhar Juntos',
@@ -598,8 +620,15 @@ const siteData = {
             ctaTitle: 'Pronto para transformar seus dados em resultados?',
             ctaDescription: 'Vamos conversar sobre como posso ajudar seu negócio a crescer com dados.',
             ctaWhatsapp: 'WhatsApp',
+            ctaSchedule: 'Agendar Conversa',
             ctaEmail: 'Email',
-            ctaLinkedIn: 'LinkedIn'
+            ctaLinkedIn: 'LinkedIn',
+            formTitle: 'Ou me envie uma mensagem',
+            formName: 'Seu Nome',
+            formEmail: 'Seu Email',
+            formCompany: 'Empresa (opcional)',
+            formMessage: 'Como posso ajudar?',
+            formSubmit: 'Enviar Mensagem'
         }
     },
 

@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initActiveNavLink();
     initContactLinks();
     renderDynamicContent();
+    updateDynamicYears();
+    updateFormPlaceholders();
 });
 
 /* --------------------------------------------------------------------------
@@ -56,6 +58,23 @@ function setLanguage(lang) {
     // Update all translatable elements
     updateTranslations();
     renderDynamicContent();
+    updateDynamicYears();
+    updateFormPlaceholders();
+}
+
+/* --------------------------------------------------------------------------
+   Dynamic Years Calculation
+   -------------------------------------------------------------------------- */
+function updateDynamicYears() {
+    const startYear = 2016;
+    const currentYear = new Date().getFullYear();
+    const yearsOfExperience = currentYear - startYear;
+
+    // Update the experience stat number
+    const experienceStat = document.querySelector('[data-i18n="hero.stats.experience.number"]');
+    if (experienceStat) {
+        experienceStat.textContent = '+' + yearsOfExperience;
+    }
 }
 
 function updateTranslations() {
@@ -287,6 +306,34 @@ function initContactLinks() {
     // GitHub
     const footerGithub = document.getElementById('footer-github');
     if (footerGithub) footerGithub.href = config.github;
+
+    // Calendly
+    const calendlyBtn = document.getElementById('calendly-btn');
+    if (calendlyBtn && config.calendly) {
+        calendlyBtn.href = config.calendly;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Form Placeholder i18n
+   -------------------------------------------------------------------------- */
+function updateFormPlaceholders() {
+    const data = siteData.workTogether[currentLang];
+
+    // Update placeholders with translations
+    const formFields = {
+        'name': data.formName,
+        'email': data.formEmail,
+        'company': data.formCompany,
+        'message': data.formMessage
+    };
+
+    Object.entries(formFields).forEach(([name, placeholder]) => {
+        const field = document.querySelector(`[name="${name}"]`);
+        if (field && placeholder) {
+            field.placeholder = placeholder;
+        }
+    });
 }
 
 /* --------------------------------------------------------------------------
