@@ -132,14 +132,55 @@ npx serve .
 python -m http.server 8000
 ```
 
+## Configurações Pendentes
+
+### 1. Formspree (Formulário de Contato)
+
+O formulário de contato está implementado mas precisa de configuração:
+
+1. Acesse [formspree.io](https://formspree.io) e crie uma conta gratuita
+2. Crie um novo form e copie o ID (ex: `xabcdefg`)
+3. Edite `index.html` linha 210, substituindo:
+   ```html
+   <!-- De: -->
+   action="https://formspree.io/f/YOUR_FORM_ID"
+
+   <!-- Para: -->
+   action="https://formspree.io/f/SEU_FORM_ID"
+   ```
+
+### 2. Calendly (Agendamento de Reuniões)
+
+O botão de agendamento está implementado mas precisa da sua URL:
+
+1. Acesse [calendly.com](https://calendly.com) e crie uma conta gratuita
+2. Configure sua disponibilidade e copie o link do evento
+3. Edite `data.js` linha 18, substituindo:
+   ```javascript
+   // De:
+   calendly: 'https://calendly.com/mrtins-joao/30min'
+
+   // Para:
+   calendly: 'https://calendly.com/SEU-USUARIO/SEU-EVENTO'
+   ```
+
 ## Próximos Passos / Roadmap
 
-- [ ] Adicionar foto de perfil real
-- [ ] Atualizar experiências com dados reais do LinkedIn
-- [ ] Adicionar mais projetos com resultados específicos
+### Concluído
+- [x] Adicionar foto de perfil real (otimizada de 9.6MB para 70KB)
+- [x] Atualizar experiências com dados reais do LinkedIn/CV
+- [x] Adicionar mais projetos com resultados específicos
+- [x] Criar seção de clientes (logos)
+- [x] Implementar formulário de contato (falta configurar Formspree)
+- [x] Adicionar botão Calendly (falta configurar URL)
+- [x] Anos de experiência dinâmicos (desde 2016)
+- [x] Adicionar Shoulder na timeline
+
+### Pendente
+- [ ] Configurar Formspree (ver seção acima)
+- [ ] Configurar Calendly (ver seção acima)
 - [ ] Configurar domínio personalizado
 - [ ] Adicionar analytics (Google Analytics ou Plausible)
-- [ ] Criar formulário de contato (Formspree, Netlify Forms)
 - [ ] Adicionar blog/artigos (opcional)
 
 ## Tecnologias
