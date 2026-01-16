@@ -167,7 +167,7 @@ const siteData = {
                     location: 'São Paulo, Brazil',
                     description: 'Founder and director of my own consulting company, delivering data solutions to enterprise clients.',
                     impacts: [
-                        '<strong>Prime Energy (Shell Company) - Data Architect:</strong> Designed complete Data Lake architecture using Medallion model (Bronze/Silver/Gold). Led implementation project and coordinated developer team. Established CI/CD workflows with Kanban and Scrum methodologies. Built foundation for future AI, Machine Learning, and API integrations',
+                        '<strong>Prime Energy (Shell Company) - Data Architect:</strong> Designed complete Data Lake architecture using Medallion model (Bronze/Silver/Gold). Led implementation project and coordinated developer team. CI/CD and Kanban/Scrum methodologies. Built foundation for future AI, Machine Learning, and API integrations',
                         '<strong>Solidaridad:</strong> Designed and implemented new Data Lake architecture with AWS Glue and Athena',
                         '<strong>Fleury:</strong> Led restructuring and unification of Pardini and Fleury environments after merger',
                         '<strong>Ford LATAM:</strong> Delivered analytics solutions for global teams, built unified KPI dashboard for Brazil and Argentina',
@@ -270,7 +270,7 @@ const siteData = {
                     location: 'São Paulo, Brasil',
                     description: 'Fundador e diretor da minha própria empresa de consultoria, entregando soluções de dados para clientes enterprise.',
                     impacts: [
-                        '<strong>Prime Energy (Shell Company) - Data Architect:</strong> Desenhei arquitetura completa de Data Lake utilizando modelo Medallion (Bronze/Silver/Gold). Liderei projeto de implantação e coordenei equipe de desenvolvedores. Estabeleci rotinas de CI/CD com metodologias Kanban e Scrum. Construí fundação para futuras integrações de IA, Machine Learning e APIs',
+                        '<strong>Prime Energy (Shell Company) - Data Architect:</strong> Desenhei arquitetura completa de Data Lake utilizando modelo Medallion (Bronze/Silver/Gold). Liderei projeto de implantação e coordenei equipe de desenvolvedores. CI/CD e utilização Kanban e Scrum. Construí fundação para futuras integrações de IA, Machine Learning e APIs',
                         '<strong>Solidaridad:</strong> Projetei e implementei nova arquitetura de Data Lake com AWS Glue e Athena',
                         '<strong>Fleury:</strong> Liderei reestruturação e unificação dos ambientes Pardini e Fleury após fusão',
                         '<strong>Ford LATAM:</strong> Entreguei soluções analytics para times globais, construí dashboard KPI unificado Brasil/Argentina',
