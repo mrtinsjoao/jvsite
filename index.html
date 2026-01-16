@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="João Vitor Martins - Arquiteto de Dados & Engenheiro de Dados. Transformando dados em decisões estratégicas.">
+    <meta name="description" content="João Vitor Martins - Data Architect & Data Engineer. Transforming data into strategic decisions.">
     <title>JV Martins | Data Architecture & Engineering</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="data.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -16,17 +17,23 @@
         <div class="nav-container">
             <a href="#now" class="nav-logo">JV<span>.</span></a>
             <ul class="nav-menu">
-                <li><a href="#now" class="nav-link">Now</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#work-together" class="nav-link">Work Together</a></li>
+                <li><a href="#now" class="nav-link" data-i18n="nav.now">Now</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#work-together" class="nav-link" data-i18n="nav.workTogether">Work Together</a></li>
             </ul>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="nav-actions">
+                <div class="language-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="pt">PT</button>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -35,30 +42,30 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <p class="hero-greeting">Olá, eu sou</p>
-                    <h1 class="hero-title">João Vitor Martins</h1>
-                    <h2 class="hero-subtitle">Data Architect & Data Engineer</h2>
-                    <p class="hero-description">
-                        Transformo dados em <strong>decisões estratégicas</strong>.
-                        Ajudo empresas a construir infraestruturas de dados robustas
-                        que geram <strong>impacto real no negócio</strong>.
+                    <p class="hero-greeting" data-i18n="hero.greeting">Hi, I'm</p>
+                    <h1 class="hero-title" data-i18n="hero.name">João Vitor Martins</h1>
+                    <h2 class="hero-subtitle" data-i18n="hero.subtitle">Data Architect & Data Engineer</h2>
+                    <p class="hero-description" data-i18n="hero.description">
+                        I transform data into <strong>strategic decisions</strong>.
+                        I help companies build robust data infrastructures
+                        that generate <strong>real business impact</strong>.
                     </p>
                     <div class="hero-cta">
-                        <a href="#work-together" class="btn btn-primary">Vamos Conversar</a>
-                        <a href="#projects" class="btn btn-secondary">Ver Projetos</a>
+                        <a href="#work-together" class="btn btn-primary" data-i18n="hero.ctaPrimary">Let's Talk</a>
+                        <a href="#projects" class="btn btn-secondary" data-i18n="hero.ctaSecondary">View Projects</a>
                     </div>
                     <div class="hero-stats">
                         <div class="stat">
-                            <span class="stat-number">+5</span>
-                            <span class="stat-label">Anos de Experiência</span>
+                            <span class="stat-number" data-i18n="hero.stats.experience.number">+5</span>
+                            <span class="stat-label" data-i18n="hero.stats.experience.label">Years of Experience</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">+20</span>
-                            <span class="stat-label">Projetos Entregues</span>
+                            <span class="stat-number" data-i18n="hero.stats.projects.number">+20</span>
+                            <span class="stat-label" data-i18n="hero.stats.projects.label">Projects Delivered</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number">3</span>
-                            <span class="stat-label">Idiomas</span>
+                            <span class="stat-number" data-i18n="hero.stats.languages.number">3</span>
+                            <span class="stat-label" data-i18n="hero.stats.languages.label">Languages</span>
                         </div>
                     </div>
                 </div>
@@ -83,81 +90,21 @@
     <!-- Section: About -->
     <section id="about" class="section about">
         <div class="container">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title" data-i18n="about.title">About</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">
-                        Prazer, pode me chamar de <strong>JV</strong>.
+                    <p class="about-intro" data-i18n="about.intro">
+                        Nice to meet you! You can call me <strong>JV</strong>.
                     </p>
-                    <p>
-                        Sou um profissional apaixonado por dados e tecnologia, com experiência
-                        sólida em <strong>Arquitetura de Dados</strong>, <strong>Engenharia de Dados</strong>
-                        e <strong>Projetos de TI</strong>. Atualmente, estou cursando um
-                        <strong>Master em Business & Technology em Data Science e IA</strong>.
-                    </p>
-                    <p>
-                        Minha missão é ajudar empresas a transformar seus dados em ativos
-                        estratégicos, construindo pipelines eficientes, arquiteturas escaláveis
-                        e soluções que realmente impactam o negócio.
-                    </p>
-                    <p>
-                        Trabalho com empresas de diferentes portes, desde startups até
-                        multinacionais como a <strong>Medtronic</strong>, sempre focando em
-                        entregar valor mensurável.
-                    </p>
+                    <div id="about-paragraphs"></div>
                     <div class="about-languages">
-                        <h3>Idiomas</h3>
-                        <div class="languages-list">
-                            <span class="language">Português <small>(Nativo)</small></span>
-                            <span class="language">Inglês <small>(Fluente)</small></span>
-                            <span class="language">Espanhol <small>(Fluente)</small></span>
-                        </div>
+                        <h3 data-i18n="about.languagesTitle">Languages</h3>
+                        <div class="languages-list" id="languages-list"></div>
                     </div>
                 </div>
                 <div class="about-skills">
-                    <h3>Stack & Competências</h3>
-                    <div class="skills-grid">
-                        <div class="skill-category">
-                            <h4>Data Engineering</h4>
-                            <ul>
-                                <li>Python</li>
-                                <li>SQL</li>
-                                <li>Apache Spark</li>
-                                <li>Airflow</li>
-                                <li>ETL/ELT</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Data Architecture</h4>
-                            <ul>
-                                <li>Data Modeling</li>
-                                <li>Data Warehouse</li>
-                                <li>Data Lake</li>
-                                <li>Lakehouse</li>
-                                <li>Data Governance</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Cloud & Tools</h4>
-                            <ul>
-                                <li>AWS</li>
-                                <li>Azure</li>
-                                <li>Databricks</li>
-                                <li>Qlik</li>
-                                <li>Power BI</li>
-                            </ul>
-                        </div>
-                        <div class="skill-category">
-                            <h4>Soft Skills</h4>
-                            <ul>
-                                <li>Liderança Técnica</li>
-                                <li>Gestão de Projetos</li>
-                                <li>Comunicação</li>
-                                <li>Problem Solving</li>
-                                <li>Mentoria</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <h3 data-i18n="about.skillsTitle">Stack & Skills</h3>
+                    <div class="skills-grid" id="skills-grid"></div>
                 </div>
             </div>
         </div>
@@ -166,275 +113,56 @@
     <!-- Section: Experience -->
     <section id="experience" class="section experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <p class="section-subtitle">Trajetória profissional e impactos gerados em cada projeto</p>
-
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Medtronic</h3>
-                            <span class="timeline-role">Data Architect / Data Engineer</span>
-                            <span class="timeline-period">Atual</span>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Liderando iniciativas de arquitetura de dados em uma das maiores empresas de tecnologia médica do mundo.</p>
-                            <div class="timeline-impacts">
-                                <h4>Impactos:</h4>
-                                <ul>
-                                    <li>Implementação de arquitetura de dados moderna</li>
-                                    <li>Otimização de pipelines de dados críticos</li>
-                                    <li>Padronização de processos de governança de dados</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Projetos de Consultoria</h3>
-                            <span class="timeline-role">Consultor de Dados</span>
-                            <span class="timeline-period">Ongoing</span>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Consultoria especializada para empresas que buscam transformar seus dados em vantagem competitiva.</p>
-                            <div class="timeline-impacts">
-                                <h4>Impactos:</h4>
-                                <ul>
-                                    <li>Redução de custos operacionais em processamento de dados</li>
-                                    <li>Implementação de soluções de BI e Analytics</li>
-                                    <li>Desenho de arquiteturas cloud-native</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Adicione mais experiências aqui -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Experiências Anteriores</h3>
-                            <span class="timeline-role">Data Engineer / BI Developer</span>
-                            <span class="timeline-period">2019 - 2023</span>
-                        </div>
-                        <div class="timeline-body">
-                            <p>Desenvolvimento de soluções de dados em empresas da região de São Paulo e São José dos Campos.</p>
-                            <div class="timeline-impacts">
-                                <h4>Impactos:</h4>
-                                <ul>
-                                    <li>Construção de data warehouses do zero</li>
-                                    <li>Automação de processos de ETL</li>
-                                    <li>Desenvolvimento de dashboards executivos</li>
-                                    <li>Treinamento e mentoria de equipes</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title" data-i18n="experience.title">Experience</h2>
+            <p class="section-subtitle" data-i18n="experience.subtitle">Professional journey and impacts generated in each project</p>
+            <div class="timeline" id="timeline"></div>
         </div>
     </section>
 
     <!-- Section: Projects -->
     <section id="projects" class="section projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <p class="section-subtitle">Alguns projetos que desenvolvi e os resultados alcançados</p>
-
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                        </svg>
-                    </div>
-                    <h3>Data Lakehouse Architecture</h3>
-                    <p>Arquitetura moderna combinando Data Lake e Data Warehouse para analytics em tempo real.</p>
-                    <div class="project-tags">
-                        <span>Databricks</span>
-                        <span>Delta Lake</span>
-                        <span>Spark</span>
-                    </div>
-                    <div class="project-result">
-                        <strong>Resultado:</strong> Redução de 60% no tempo de processamento
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="12" y1="20" x2="12" y2="10"></line>
-                            <line x1="18" y1="20" x2="18" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="16"></line>
-                        </svg>
-                    </div>
-                    <h3>Pipeline de Dados em Cloud</h3>
-                    <p>Desenvolvimento de pipelines de dados automatizados e escaláveis em ambiente cloud.</p>
-                    <div class="project-tags">
-                        <span>AWS</span>
-                        <span>Airflow</span>
-                        <span>Python</span>
-                    </div>
-                    <div class="project-result">
-                        <strong>Resultado:</strong> Economia de R$ 50k/mês em infraestrutura
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="3" y1="9" x2="21" y2="9"></line>
-                            <line x1="9" y1="21" x2="9" y2="9"></line>
-                        </svg>
-                    </div>
-                    <h3>BI & Analytics Platform</h3>
-                    <p>Plataforma completa de Business Intelligence para tomada de decisão estratégica.</p>
-                    <div class="project-tags">
-                        <span>Qlik</span>
-                        <span>Power BI</span>
-                        <span>SQL</span>
-                    </div>
-                    <div class="project-result">
-                        <strong>Resultado:</strong> +30% em eficiência operacional
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                        </svg>
-                    </div>
-                    <h3>Data Governance Framework</h3>
-                    <p>Implementação de framework de governança de dados para garantir qualidade e compliance.</p>
-                    <div class="project-tags">
-                        <span>Data Quality</span>
-                        <span>LGPD</span>
-                        <span>Catalogação</span>
-                    </div>
-                    <div class="project-result">
-                        <strong>Resultado:</strong> 100% de conformidade regulatória
-                    </div>
-                </article>
-            </div>
+            <h2 class="section-title" data-i18n="projects.title">Projects</h2>
+            <p class="section-subtitle" data-i18n="projects.subtitle">Some projects I developed and the results achieved</p>
+            <div class="projects-grid" id="projects-grid"></div>
         </div>
     </section>
 
     <!-- Section: How We Can Work Together -->
     <section id="work-together" class="section work-together">
         <div class="container">
-            <h2 class="section-title">How We Can Work Together</h2>
-            <p class="section-subtitle">Modelos flexíveis de parceria para atender às suas necessidades</p>
+            <h2 class="section-title" data-i18n="workTogether.title">How We Can Work Together</h2>
+            <p class="section-subtitle" data-i18n="workTogether.subtitle">Flexible partnership models to meet your needs</p>
 
-            <div class="work-models">
-                <div class="work-card">
-                    <div class="work-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </div>
-                    <h3>Me Contratando</h3>
-                    <p>Contratação direta como profissional dedicado ao seu projeto ou equipe.</p>
-                    <ul class="work-benefits">
-                        <li>Dedicação exclusiva ao projeto</li>
-                        <li>Integração com sua equipe</li>
-                        <li>Transferência de conhecimento</li>
-                        <li>Suporte contínuo</li>
-                    </ul>
-                    <span class="work-ideal">Ideal para: Projetos de longo prazo</span>
-                </div>
-
-                <div class="work-card featured">
-                    <div class="work-badge">Mais Popular</div>
-                    <div class="work-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Via Minha Empresa</h3>
-                    <p>Contratação através da minha empresa de consultoria para projetos estruturados.</p>
-                    <ul class="work-benefits">
-                        <li>Equipe especializada</li>
-                        <li>Metodologia comprovada</li>
-                        <li>Entrega com SLA definido</li>
-                        <li>Flexibilidade contratual</li>
-                    </ul>
-                    <span class="work-ideal">Ideal para: Projetos com escopo definido</span>
-                </div>
-
-                <div class="work-card">
-                    <div class="work-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                    </div>
-                    <h3>Parceria nos Resultados</h3>
-                    <p>Desenvolvo o projeto e recebo parte do retorno gerado pela solução.</p>
-                    <ul class="work-benefits">
-                        <li>Baixo investimento inicial</li>
-                        <li>Alinhamento de interesses</li>
-                        <li>Compromisso com resultados</li>
-                        <li>Parceria de longo prazo</li>
-                    </ul>
-                    <span class="work-ideal">Ideal para: Startups e projetos inovadores</span>
-                </div>
-            </div>
+            <div class="work-models" id="work-models"></div>
 
             <div class="differentials">
-                <h3>Por que trabalhar comigo?</h3>
-                <div class="diff-grid">
-                    <div class="diff-item">
-                        <span class="diff-number">01</span>
-                        <h4>Experiência Comprovada</h4>
-                        <p>Anos de experiência em projetos de dados para empresas de diversos portes e segmentos.</p>
-                    </div>
-                    <div class="diff-item">
-                        <span class="diff-number">02</span>
-                        <h4>Foco em Resultados</h4>
-                        <p>Cada projeto é orientado a métricas claras e impacto mensurável no negócio.</p>
-                    </div>
-                    <div class="diff-item">
-                        <span class="diff-number">03</span>
-                        <h4>Visão End-to-End</h4>
-                        <p>Da arquitetura à implementação, entrego soluções completas e funcionais.</p>
-                    </div>
-                    <div class="diff-item">
-                        <span class="diff-number">04</span>
-                        <h4>Comunicação Clara</h4>
-                        <p>Traduzo complexidade técnica em linguagem de negócio para stakeholders.</p>
-                    </div>
-                </div>
+                <h3 data-i18n="workTogether.differentialsTitle">Why work with me?</h3>
+                <div class="diff-grid" id="diff-grid"></div>
             </div>
 
             <div class="contact-cta">
-                <h3>Pronto para transformar seus dados em resultados?</h3>
-                <p>Vamos conversar sobre como posso ajudar seu negócio a crescer com dados.</p>
+                <h3 data-i18n="workTogether.ctaTitle">Ready to transform your data into results?</h3>
+                <p data-i18n="workTogether.ctaDescription">Let's talk about how I can help your business grow with data.</p>
                 <div class="contact-buttons">
-                    <a href="https://www.linkedin.com/in/mrtinsjoao/" target="_blank" class="btn btn-primary">
+                    <a href="#" id="whatsapp-btn" target="_blank" class="btn btn-primary btn-whatsapp">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
                         </svg>
-                        LinkedIn
+                        <span data-i18n="workTogether.ctaWhatsapp">WhatsApp</span>
                     </a>
-                    <a href="mailto:contato@jvmartins.com" class="btn btn-secondary">
+                    <a href="#" id="email-btn" class="btn btn-secondary btn-email">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                             <polyline points="22,6 12,13 2,6"></polyline>
                         </svg>
-                        Email
+                        <span data-i18n="workTogether.ctaEmail">Email</span>
+                    </a>
+                    <a href="#" id="linkedin-btn" target="_blank" class="btn btn-secondary btn-linkedin">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        <span data-i18n="workTogether.ctaLinkedIn">LinkedIn</span>
                     </a>
                 </div>
             </div>
@@ -447,18 +175,25 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <span class="footer-logo">JV<span>.</span></span>
-                    <p>Transformando dados em decisões estratégicas.</p>
+                    <p data-i18n="footer.tagline">Transforming data into strategic decisions.</p>
                 </div>
                 <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/mrtinsjoao/" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/mrtinsjoao" target="_blank">GitHub</a>
+                    <a href="#" id="footer-linkedin" target="_blank">LinkedIn</a>
+                    <a href="#" id="footer-github" target="_blank">GitHub</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 João Vitor Martins. Todos os direitos reservados.</p>
+                <p data-i18n="footer.rights">© 2025 João Vitor Martins. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="#" id="whatsapp-float" class="whatsapp-float" target="_blank" aria-label="Contact via WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
 
     <script src="script.js"></script>
 </body>
