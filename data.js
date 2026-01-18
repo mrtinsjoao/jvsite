@@ -115,8 +115,8 @@ const siteData = {
             paragraphs: [
                 "I've been working with data for over <strong>10 years</strong>, and if you take a closer look at my profile, you'll find a wide range of valuable experience across different industries - from healthcare and pharma to automotive and manufacturing.",
                 "I'm passionate about solving problems and delivering practical solutions to various challenges. Currently, I work as <strong>Lead Data Engineer at Medtronic</strong> (USA) and also run my own consulting company, <strong>DadosNow</strong>, where I help companies transform their data into competitive advantage.",
-                "My expertise spans <strong>Data Architecture</strong>, <strong>Data Engineering</strong>, <strong>BI & Analytics</strong>, and <strong>Cloud Solutions</strong>. I've worked with companies like Novartis, Hospital Sírio-Libanês, Embraer, Ford, and Fleury.",
-                "I hold an <strong>MBA in Information Technology</strong> from Sirius Educação and a degree in <strong>Science and Technology from UNIFESP</strong>."
+                "My expertise spans <strong>Data Architecture</strong>, <strong>Data Engineering</strong>, <strong>BI & Analytics</strong>, and <strong>Cloud Solutions</strong>. I've worked with companies like Novartis, Hospital Sírio-Libanês, Shoulder, Embraer, Ford, and Fleury.",
+                "I hold a <strong>Master in Data Science and AI</strong> from Sirius Educação (MBA)."
             ],
             languagesTitle: 'Languages',
             languages: [
@@ -150,8 +150,8 @@ const siteData = {
             paragraphs: [
                 "Trabalho com dados há mais de <strong>10 anos</strong>, e se você olhar meu perfil de perto, encontrará uma ampla experiência em diferentes indústrias - desde saúde e farmacêutica até automotiva e manufatura.",
                 "Sou apaixonado por resolver problemas e entregar soluções práticas para diversos desafios. Atualmente, trabalho como <strong>Lead Data Engineer na Medtronic</strong> (EUA) e também dirijo minha própria empresa de consultoria, <strong>DadosNow</strong>, onde ajudo empresas a transformar seus dados em vantagem competitiva.",
-                "Minha expertise abrange <strong>Arquitetura de Dados</strong>, <strong>Engenharia de Dados</strong>, <strong>BI & Analytics</strong> e <strong>Soluções Cloud</strong>. Já trabalhei com empresas como Novartis, Hospital Sírio-Libanês, Embraer, Ford e Fleury.",
-                "Possuo <strong>MBA em Tecnologia da Informação</strong> pela Sirius Educação e graduação em <strong>Ciência e Tecnologia pela UNIFESP</strong>."
+                "Minha expertise abrange <strong>Arquitetura de Dados</strong>, <strong>Engenharia de Dados</strong>, <strong>BI & Analytics</strong> e <strong>Soluções Cloud</strong>. Já trabalhei com empresas como Novartis, Hospital Sírio-Libanês, Shoulder, Embraer, Ford e Fleury.",
+                "Possuo <strong>Master in Data Science and AI</strong> pela Sirius Educação (MBA)."
             ],
             languagesTitle: 'Idiomas',
             languages: [
@@ -185,8 +185,8 @@ const siteData = {
             paragraphs: [
                 "Llevo más de <strong>10 años</strong> trabajando con datos, y si miras mi perfil de cerca, encontrarás una amplia experiencia en diferentes industrias - desde salud y farmacéutica hasta automotriz y manufactura.",
                 "Me apasiona resolver problemas y entregar soluciones prácticas. Actualmente trabajo como <strong>Lead Data Engineer en Medtronic</strong> (EE.UU.) y también dirijo mi propia empresa de consultoría, <strong>DadosNow</strong>, donde ayudo a empresas a transformar sus datos en ventaja competitiva.",
-                "Mi experiencia abarca <strong>Arquitectura de Datos</strong>, <strong>Ingeniería de Datos</strong>, <strong>BI & Analytics</strong> y <strong>Soluciones Cloud</strong>. He trabajado con empresas como Novartis, Hospital Sírio-Libanês, Embraer, Ford y Fleury.",
-                "Tengo un <strong>MBA en Tecnología de la Información</strong> de Sirius Educação y una licenciatura en <strong>Ciencia y Tecnología de UNIFESP</strong>."
+                "Mi experiencia abarca <strong>Arquitectura de Datos</strong>, <strong>Ingeniería de Datos</strong>, <strong>BI & Analytics</strong> y <strong>Soluciones Cloud</strong>. He trabajado con empresas como Novartis, Hospital Sírio-Libanês, Shoulder, Embraer, Ford y Fleury.",
+                "Tengo un <strong>Master in Data Science and AI</strong> de Sirius Educação (MBA)."
             ],
             languagesTitle: 'Idiomas',
             languages: [
@@ -278,6 +278,20 @@ const siteData = {
                         'Oversaw complete migration from QlikView/Qlik Sense to Power BI',
                         'Designed new table structures in AWS Redshift as Data Engineer',
                         'Led intercloud migration from AWS to Oracle Cloud Infrastructure (OCI)'
+                    ]
+                },
+                {
+                    company: 'Shoulder',
+                    role: 'Business Analyst',
+                    period: 'Jul 2021 - Apr 2023',
+                    location: 'São Paulo, Brazil',
+                    description: 'Led strategic development of BI applications at one of Brazil\'s largest fashion retailers, concurrent with Hospital Sírio-Libanês.',
+                    impacts: [
+                        'Led strategic development of QlikView and Qlik Sense applications with SQL Server integration',
+                        'Managed full project lifecycle from concept to delivery, creating data-driven dashboards',
+                        'Administered Qlik servers ensuring performance, stability, and reliability',
+                        'Designed and implemented automation processes in SQL and Qlik, optimizing data flows',
+                        '<strong>Key Project:</strong> Built CRM structure for targeting potential clients and running tailored marketing campaigns'
                     ]
                 },
                 {
@@ -382,6 +396,20 @@ const siteData = {
                         'Supervisionei migração completa de QlikView/Qlik Sense para Power BI',
                         'Projetei novas estruturas de tabelas no AWS Redshift como Data Engineer',
                         'Liderei migração intercloud de AWS para Oracle Cloud Infrastructure (OCI)'
+                    ]
+                },
+                {
+                    company: 'Shoulder',
+                    role: 'Business Analyst',
+                    period: 'Jul 2021 - Abr 2023',
+                    location: 'São Paulo, Brasil',
+                    description: 'Liderei desenvolvimento estratégico de aplicações de BI em uma das maiores varejistas de moda do Brasil, concomitante com o Hospital Sírio-Libanês.',
+                    impacts: [
+                        'Liderei desenvolvimento estratégico de aplicações QlikView e Qlik Sense com integração SQL Server',
+                        'Gerenciei ciclo completo de projetos do conceito à entrega, criando dashboards data-driven',
+                        'Administrei servidores Qlik garantindo performance, estabilidade e confiabilidade',
+                        'Projetei e implementei processos de automação em SQL e Qlik, otimizando fluxos de dados',
+                        '<strong>Projeto Chave:</strong> Construí estrutura de CRM para targeting de clientes potenciais e campanhas de marketing personalizadas'
                     ]
                 },
                 {
@@ -705,6 +733,115 @@ const siteData = {
             formCompany: 'Empresa (opcional)',
             formMessage: 'Como posso ajudar?',
             formSubmit: 'Enviar Mensagem'
+        }
+    },
+
+    // ==================== BLOG ====================
+    blog: {
+        en: {
+            title: 'Blog & Articles',
+            subtitle: 'Sharing knowledge about data, architecture, and engineering',
+            comingSoon: 'More articles coming soon!',
+            readTime: 'min read',
+            articles: [
+                {
+                    title: 'Building a Modern Data Lake with Medallion Architecture',
+                    excerpt: 'Learn how to structure your Data Lake using the Bronze, Silver, and Gold layers for better data quality and governance.',
+                    date: 'Jan 2025',
+                    readTime: 8,
+                    tags: ['Data Lake', 'AWS', 'Architecture'],
+                    url: '#',
+                    icon: 'lakehouse'
+                },
+                {
+                    title: 'From QlikView to Power BI: A Migration Guide',
+                    excerpt: 'Best practices and lessons learned from migrating enterprise BI environments between platforms.',
+                    date: 'Dec 2024',
+                    readTime: 6,
+                    tags: ['BI', 'Migration', 'Power BI'],
+                    url: '#',
+                    icon: 'bi'
+                },
+                {
+                    title: 'Snowflake vs Databricks: Choosing Your Data Platform',
+                    excerpt: 'A practical comparison based on real project experience to help you choose the right platform for your needs.',
+                    date: 'Nov 2024',
+                    readTime: 10,
+                    tags: ['Snowflake', 'Databricks', 'Cloud'],
+                    url: '#',
+                    icon: 'pipeline'
+                }
+            ]
+        },
+        pt: {
+            title: 'Blog & Artigos',
+            subtitle: 'Compartilhando conhecimento sobre dados, arquitetura e engenharia',
+            comingSoon: 'Mais artigos em breve!',
+            readTime: 'min de leitura',
+            articles: [
+                {
+                    title: 'Construindo um Data Lake Moderno com Arquitetura Medallion',
+                    excerpt: 'Aprenda como estruturar seu Data Lake usando as camadas Bronze, Silver e Gold para melhor qualidade e governança de dados.',
+                    date: 'Jan 2025',
+                    readTime: 8,
+                    tags: ['Data Lake', 'AWS', 'Arquitetura'],
+                    url: '#',
+                    icon: 'lakehouse'
+                },
+                {
+                    title: 'De QlikView para Power BI: Um Guia de Migração',
+                    excerpt: 'Melhores práticas e lições aprendidas na migração de ambientes de BI enterprise entre plataformas.',
+                    date: 'Dez 2024',
+                    readTime: 6,
+                    tags: ['BI', 'Migração', 'Power BI'],
+                    url: '#',
+                    icon: 'bi'
+                },
+                {
+                    title: 'Snowflake vs Databricks: Escolhendo sua Plataforma de Dados',
+                    excerpt: 'Uma comparação prática baseada em experiência real de projetos para ajudá-lo a escolher a plataforma certa.',
+                    date: 'Nov 2024',
+                    readTime: 10,
+                    tags: ['Snowflake', 'Databricks', 'Cloud'],
+                    url: '#',
+                    icon: 'pipeline'
+                }
+            ]
+        },
+        es: {
+            title: 'Blog y Artículos',
+            subtitle: 'Compartiendo conocimiento sobre datos, arquitectura e ingeniería',
+            comingSoon: '¡Más artículos próximamente!',
+            readTime: 'min de lectura',
+            articles: [
+                {
+                    title: 'Construyendo un Data Lake Moderno con Arquitectura Medallion',
+                    excerpt: 'Aprende cómo estructurar tu Data Lake usando las capas Bronze, Silver y Gold para mejor calidad y gobernanza de datos.',
+                    date: 'Ene 2025',
+                    readTime: 8,
+                    tags: ['Data Lake', 'AWS', 'Arquitectura'],
+                    url: '#',
+                    icon: 'lakehouse'
+                },
+                {
+                    title: 'De QlikView a Power BI: Una Guía de Migración',
+                    excerpt: 'Mejores prácticas y lecciones aprendidas en la migración de ambientes de BI enterprise entre plataformas.',
+                    date: 'Dic 2024',
+                    readTime: 6,
+                    tags: ['BI', 'Migración', 'Power BI'],
+                    url: '#',
+                    icon: 'bi'
+                },
+                {
+                    title: 'Snowflake vs Databricks: Eligiendo tu Plataforma de Datos',
+                    excerpt: 'Una comparación práctica basada en experiencia real de proyectos para ayudarte a elegir la plataforma correcta.',
+                    date: 'Nov 2024',
+                    readTime: 10,
+                    tags: ['Snowflake', 'Databricks', 'Cloud'],
+                    url: '#',
+                    icon: 'pipeline'
+                }
+            ]
         }
     },
 
