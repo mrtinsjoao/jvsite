@@ -1657,6 +1657,16 @@ ul {
     background: var(--color-bg-tertiary);
 }
 
+[data-theme="light"] .theme-toggle {
+    color: var(--color-text-primary);
+    border-color: var(--color-border-light);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
 /* Smooth theme transition */
 body,
 .navbar,

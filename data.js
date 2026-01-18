@@ -285,7 +285,7 @@ const siteData = {
                     role: 'Business Analyst',
                     period: 'Jul 2021 - Apr 2023',
                     location: 'São Paulo, Brazil',
-                    description: 'Led strategic development of BI applications at one of Brazil\'s largest fashion retailers, concurrent with Hospital Sírio-Libanês.',
+                    description: 'Led strategic development of BI applications at one of Brazil\'s largest fashion retailers.',
                     impacts: [
                         'Led strategic development of QlikView and Qlik Sense applications with SQL Server integration',
                         'Managed full project lifecycle from concept to delivery, creating data-driven dashboards',
@@ -403,7 +403,7 @@ const siteData = {
                     role: 'Business Analyst',
                     period: 'Jul 2021 - Abr 2023',
                     location: 'São Paulo, Brasil',
-                    description: 'Liderei desenvolvimento estratégico de aplicações de BI em uma das maiores varejistas de moda do Brasil, concomitante com o Hospital Sírio-Libanês.',
+                    description: 'Liderei desenvolvimento estratégico de aplicações de BI em uma das maiores varejistas de moda do Brasil.',
                     impacts: [
                         'Liderei desenvolvimento estratégico de aplicações QlikView e Qlik Sense com integração SQL Server',
                         'Gerenciei ciclo completo de projetos do conceito à entrega, criando dashboards data-driven',
