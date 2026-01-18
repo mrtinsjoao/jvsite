@@ -745,31 +745,31 @@ const siteData = {
             readTime: 'min read',
             articles: [
                 {
-                    title: 'Building a Modern Data Lake with Medallion Architecture',
-                    excerpt: 'Learn how to structure your Data Lake using the Bronze, Silver, and Gold layers for better data quality and governance.',
-                    date: 'Jan 2025',
-                    readTime: 8,
-                    tags: ['Data Lake', 'AWS', 'Architecture'],
-                    url: '#',
-                    icon: 'lakehouse'
-                },
-                {
-                    title: 'From QlikView to Power BI: A Migration Guide',
-                    excerpt: 'Best practices and lessons learned from migrating enterprise BI environments between platforms.',
-                    date: 'Dec 2024',
-                    readTime: 6,
-                    tags: ['BI', 'Migration', 'Power BI'],
-                    url: '#',
+                    title: 'Using Dataflows for Cost Reduction and Governance',
+                    excerpt: 'How I leverage Microsoft Dataflows to centralize queries, reduce costs on Databricks/Snowflake, and enable governance with reusable data layers.',
+                    date: 'Aug 2025',
+                    readTime: 4,
+                    tags: ['Power BI', 'Dataflows', 'Governance'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_powerbi-microsoftfabric-dataflows-activity-7364354028513673216-e_cS',
                     icon: 'bi'
                 },
                 {
-                    title: 'Snowflake vs Databricks: Choosing Your Data Platform',
-                    excerpt: 'A practical comparison based on real project experience to help you choose the right platform for your needs.',
-                    date: 'Nov 2024',
-                    readTime: 10,
-                    tags: ['Snowflake', 'Databricks', 'Cloud'],
-                    url: '#',
+                    title: 'Performance Optimization: From 8 Hours to 6 Minutes',
+                    excerpt: 'How I reduced a Power BI Dataflow load time from 8 hours to just 6 minutes by migrating transformations to AWS Glue with Spark and Athena.',
+                    date: 'Aug 2025',
+                    readTime: 3,
+                    tags: ['AWS Glue', 'Athena', 'Performance'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_boa-tarde-pessoal-tudo-bem-hoje-compartilho-activity-7357106422272208896-yLmt',
                     icon: 'pipeline'
+                },
+                {
+                    title: 'How a Data Crisis Became an Architecture Journey',
+                    excerpt: 'A consulting case where data divergence between systems caused trust issues. The solution: a complete Data Lake redesign across AWS and GCP.',
+                    date: 'Jul 2025',
+                    readTime: 5,
+                    tags: ['Data Lake', 'Multicloud', 'Architecture'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_dataengineering-dataarchitecture-datalake-activity-7346590137654435841-U-Ie',
+                    icon: 'lakehouse'
                 }
             ]
         },
@@ -780,31 +780,31 @@ const siteData = {
             readTime: 'min de leitura',
             articles: [
                 {
-                    title: 'Construindo um Data Lake Moderno com Arquitetura Medallion',
-                    excerpt: 'Aprenda como estruturar seu Data Lake usando as camadas Bronze, Silver e Gold para melhor qualidade e governança de dados.',
-                    date: 'Jan 2025',
-                    readTime: 8,
-                    tags: ['Data Lake', 'AWS', 'Arquitetura'],
-                    url: '#',
-                    icon: 'lakehouse'
-                },
-                {
-                    title: 'De QlikView para Power BI: Um Guia de Migração',
-                    excerpt: 'Melhores práticas e lições aprendidas na migração de ambientes de BI enterprise entre plataformas.',
-                    date: 'Dez 2024',
-                    readTime: 6,
-                    tags: ['BI', 'Migração', 'Power BI'],
-                    url: '#',
+                    title: 'Usando Dataflows para Redução de Custos e Governança',
+                    excerpt: 'Como uso Microsoft Dataflows para centralizar queries, reduzir custos no Databricks/Snowflake e habilitar governança com camadas de dados reutilizáveis.',
+                    date: 'Ago 2025',
+                    readTime: 4,
+                    tags: ['Power BI', 'Dataflows', 'Governança'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_powerbi-microsoftfabric-dataflows-activity-7364354028513673216-e_cS',
                     icon: 'bi'
                 },
                 {
-                    title: 'Snowflake vs Databricks: Escolhendo sua Plataforma de Dados',
-                    excerpt: 'Uma comparação prática baseada em experiência real de projetos para ajudá-lo a escolher a plataforma certa.',
-                    date: 'Nov 2024',
-                    readTime: 10,
-                    tags: ['Snowflake', 'Databricks', 'Cloud'],
-                    url: '#',
+                    title: 'Otimização de Performance: De 8 Horas para 6 Minutos',
+                    excerpt: 'Como reduzi o tempo de carga de um Dataflow Power BI de 8 horas para apenas 6 minutos migrando transformações para AWS Glue com Spark e Athena.',
+                    date: 'Ago 2025',
+                    readTime: 3,
+                    tags: ['AWS Glue', 'Athena', 'Performance'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_boa-tarde-pessoal-tudo-bem-hoje-compartilho-activity-7357106422272208896-yLmt',
                     icon: 'pipeline'
+                },
+                {
+                    title: 'Como uma Crise de Dados Virou uma Jornada de Arquitetura',
+                    excerpt: 'Um caso de consultoria onde divergência de dados entre sistemas causou problemas de confiança. A solução: redesenho completo do Data Lake em AWS e GCP.',
+                    date: 'Jul 2025',
+                    readTime: 5,
+                    tags: ['Data Lake', 'Multicloud', 'Arquitetura'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_dataengineering-dataarchitecture-datalake-activity-7346590137654435841-U-Ie',
+                    icon: 'lakehouse'
                 }
             ]
         },
@@ -815,31 +815,31 @@ const siteData = {
             readTime: 'min de lectura',
             articles: [
                 {
-                    title: 'Construyendo un Data Lake Moderno con Arquitectura Medallion',
-                    excerpt: 'Aprende cómo estructurar tu Data Lake usando las capas Bronze, Silver y Gold para mejor calidad y gobernanza de datos.',
-                    date: 'Ene 2025',
-                    readTime: 8,
-                    tags: ['Data Lake', 'AWS', 'Arquitectura'],
-                    url: '#',
-                    icon: 'lakehouse'
-                },
-                {
-                    title: 'De QlikView a Power BI: Una Guía de Migración',
-                    excerpt: 'Mejores prácticas y lecciones aprendidas en la migración de ambientes de BI enterprise entre plataformas.',
-                    date: 'Dic 2024',
-                    readTime: 6,
-                    tags: ['BI', 'Migración', 'Power BI'],
-                    url: '#',
+                    title: 'Usando Dataflows para Reducción de Costos y Gobernanza',
+                    excerpt: 'Cómo uso Microsoft Dataflows para centralizar queries, reducir costos en Databricks/Snowflake y habilitar gobernanza con capas de datos reutilizables.',
+                    date: 'Ago 2025',
+                    readTime: 4,
+                    tags: ['Power BI', 'Dataflows', 'Gobernanza'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_powerbi-microsoftfabric-dataflows-activity-7364354028513673216-e_cS',
                     icon: 'bi'
                 },
                 {
-                    title: 'Snowflake vs Databricks: Eligiendo tu Plataforma de Datos',
-                    excerpt: 'Una comparación práctica basada en experiencia real de proyectos para ayudarte a elegir la plataforma correcta.',
-                    date: 'Nov 2024',
-                    readTime: 10,
-                    tags: ['Snowflake', 'Databricks', 'Cloud'],
-                    url: '#',
+                    title: 'Optimización de Rendimiento: De 8 Horas a 6 Minutos',
+                    excerpt: 'Cómo reduje el tiempo de carga de un Dataflow Power BI de 8 horas a solo 6 minutos migrando transformaciones a AWS Glue con Spark y Athena.',
+                    date: 'Ago 2025',
+                    readTime: 3,
+                    tags: ['AWS Glue', 'Athena', 'Rendimiento'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_boa-tarde-pessoal-tudo-bem-hoje-compartilho-activity-7357106422272208896-yLmt',
                     icon: 'pipeline'
+                },
+                {
+                    title: 'Cómo una Crisis de Datos se Convirtió en un Viaje de Arquitectura',
+                    excerpt: 'Un caso de consultoría donde la divergencia de datos entre sistemas causó problemas de confianza. La solución: rediseño completo del Data Lake en AWS y GCP.',
+                    date: 'Jul 2025',
+                    readTime: 5,
+                    tags: ['Data Lake', 'Multicloud', 'Arquitectura'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_dataengineering-dataarchitecture-datalake-activity-7346590137654435841-U-Ie',
+                    icon: 'lakehouse'
                 }
             ]
         }
