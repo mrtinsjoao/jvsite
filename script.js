@@ -66,7 +66,139 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDynamicYears();
     updateFormPlaceholders();
     initTypewriter();
+    initAnalyticsEvents();
 });
+
+/* --------------------------------------------------------------------------
+   Google Analytics 4 - Custom Events
+   -------------------------------------------------------------------------- */
+function trackEvent(eventName, params = {}) {
+    if (typeof gtag === 'function') {
+        gtag('event', eventName, params);
+    }
+}
+
+function initAnalyticsEvents() {
+    // Download CV button
+    const downloadCvBtn = document.querySelector('a[download="JV_Martins_CV.pdf"]');
+    if (downloadCvBtn) {
+        downloadCvBtn.addEventListener('click', () => {
+            trackEvent('download_cv', {
+                event_category: 'engagement',
+                event_label: 'CV Download'
+            });
+        });
+    }
+
+    // WhatsApp buttons
+    const whatsappBtn = document.getElementById('whatsapp-btn');
+    const whatsappFloat = document.getElementById('whatsapp-float');
+
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', () => {
+            trackEvent('contact_whatsapp', {
+                event_category: 'contact',
+                event_label: 'WhatsApp Button'
+            });
+        });
+    }
+
+    if (whatsappFloat) {
+        whatsappFloat.addEventListener('click', () => {
+            trackEvent('contact_whatsapp', {
+                event_category: 'contact',
+                event_label: 'WhatsApp Float'
+            });
+        });
+    }
+
+    // LinkedIn button
+    const linkedinBtn = document.getElementById('linkedin-btn');
+    if (linkedinBtn) {
+        linkedinBtn.addEventListener('click', () => {
+            trackEvent('contact_linkedin', {
+                event_category: 'contact',
+                event_label: 'LinkedIn Button'
+            });
+        });
+    }
+
+    // Calendly button
+    const calendlyBtn = document.getElementById('calendly-btn');
+    if (calendlyBtn) {
+        calendlyBtn.addEventListener('click', () => {
+            trackEvent('schedule_call', {
+                event_category: 'contact',
+                event_label: 'Calendly Button'
+            });
+        });
+    }
+
+    // Contact form submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', () => {
+            trackEvent('form_submit', {
+                event_category: 'contact',
+                event_label: 'Contact Form'
+            });
+        });
+    }
+
+    // Blog article clicks
+    document.addEventListener('click', (e) => {
+        const blogCard = e.target.closest('.blog-card');
+        if (blogCard) {
+            trackEvent('blog_click', {
+                event_category: 'engagement',
+                event_label: blogCard.querySelector('h3')?.textContent || 'Article'
+            });
+        }
+    });
+
+    // GitHub repo clicks
+    document.addEventListener('click', (e) => {
+        const repoCard = e.target.closest('.github-repo-card');
+        if (repoCard) {
+            trackEvent('github_repo_click', {
+                event_category: 'engagement',
+                event_label: repoCard.querySelector('h4')?.textContent || 'Repository'
+            });
+        }
+    });
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            trackEvent('theme_change', {
+                event_category: 'engagement',
+                event_label: currentTheme === 'dark' ? 'Light Mode' : 'Dark Mode'
+            });
+        });
+    }
+
+    // Language change
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            trackEvent('language_change', {
+                event_category: 'engagement',
+                event_label: btn.dataset.lang.toUpperCase()
+            });
+        });
+    });
+
+    // Project cards clicks
+    document.addEventListener('click', (e) => {
+        const projectCard = e.target.closest('.project-card');
+        if (projectCard) {
+            trackEvent('project_view', {
+                event_category: 'engagement',
+                event_label: projectCard.querySelector('h3')?.textContent || 'Project'
+            });
+        }
+    });
+}
 
 /* --------------------------------------------------------------------------
    Language / i18n System

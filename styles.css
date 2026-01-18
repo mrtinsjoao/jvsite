@@ -1660,11 +1660,39 @@ ul {
 [data-theme="light"] .theme-toggle {
     color: var(--color-text-primary);
     border-color: var(--color-border-light);
+    background: var(--color-bg-secondary);
 }
 
 [data-theme="light"] .theme-toggle:hover {
     color: var(--color-accent);
     border-color: var(--color-accent);
+}
+
+[data-theme="light"] .nav-logo {
+    color: var(--color-text-primary);
+}
+
+[data-theme="light"] .nav-link {
+    color: var(--color-text-secondary);
+}
+
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active {
+    color: var(--color-text-primary);
+}
+
+[data-theme="light"] .lang-btn {
+    color: var(--color-text-primary);
+}
+
+[data-theme="light"] .lang-btn.active {
+    background: var(--color-accent);
+    color: white;
+}
+
+[data-theme="light"] .language-toggle {
+    background: var(--color-bg-secondary);
+    border-color: var(--color-border-light);
 }
 
 /* Smooth theme transition */
