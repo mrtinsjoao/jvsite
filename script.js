@@ -1,12 +1,77 @@
 /* ==========================================================================
    JV Martins - Portfolio JavaScript
-   Features: i18n, Dynamic Content, Animations
+   Features: i18n, Dynamic Content, Animations, PWA
    ========================================================================== */
+
+// Register Service Worker for PWA
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('SW registered:', registration.scope);
+            })
+            .catch(error => {
+                console.log('SW registration failed:', error);
+            });
+    });
+}
 
 // Current language state
 let currentLang = 'en';
 
+// Current theme state
+let currentTheme = 'dark';
+
+/* --------------------------------------------------------------------------
+   Theme System (Dark/Light Mode)
+   -------------------------------------------------------------------------- */
+function initTheme() {
+    // Check for saved preference, then system preference, default to dark
+    const savedTheme = localStorage.getItem('jv-theme');
+
+    if (savedTheme) {
+        currentTheme = savedTheme;
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        currentTheme = 'light';
+    } else {
+        currentTheme = 'dark';
+    }
+
+    applyTheme(currentTheme);
+
+    // Set up theme toggle button
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+    }
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('jv-theme')) {
+            currentTheme = e.matches ? 'light' : 'dark';
+            applyTheme(currentTheme);
+        }
+    });
+}
+
+function toggleTheme() {
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('jv-theme', currentTheme);
+    applyTheme(currentTheme);
+}
+
+function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // Update meta theme-color for mobile browsers
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+        metaThemeColor.setAttribute('content', theme === 'dark' ? '#0a0a0b' : '#ffffff');
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+    initTheme();
     initLanguage();
     initNavigation();
     initScrollAnimations();
@@ -15,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderDynamicContent();
     updateDynamicYears();
     updateFormPlaceholders();
+    initTypewriter();
 });
 
 /* --------------------------------------------------------------------------
@@ -60,6 +126,7 @@ function setLanguage(lang) {
     renderDynamicContent();
     updateDynamicYears();
     updateFormPlaceholders();
+    updateTypewriter();
 }
 
 /* --------------------------------------------------------------------------
@@ -96,14 +163,21 @@ function getTranslation(key) {
             value = value[k];
         } else if (value[currentLang] && value[currentLang][k] !== undefined) {
             value = value[currentLang][k];
+        } else if (value['en'] && value['en'][k] !== undefined) {
+            // Fallback to English
+            value = value['en'][k];
         } else {
             return null;
         }
     }
 
-    // If we ended up at a language object, get the current language value
-    if (value && typeof value === 'object' && value[currentLang]) {
-        return value[currentLang];
+    // If we ended up at a language object, get the current language value or fallback to English
+    if (value && typeof value === 'object') {
+        if (value[currentLang]) {
+            return value[currentLang];
+        } else if (value['en']) {
+            return value['en'];
+        }
     }
 
     return value;
@@ -587,3 +661,193 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/* --------------------------------------------------------------------------
+   Typewriter Animation
+   -------------------------------------------------------------------------- */
+let typewriterInstance = null;
+
+function initTypewriter() {
+    const element = document.getElementById('typewriter');
+    if (!element) return;
+
+    const words = siteData.hero[currentLang].typewriterWords || [
+        siteData.hero[currentLang].subtitle
+    ];
+
+    typewriterInstance = new Typewriter(element, words);
+    typewriterInstance.start();
+}
+
+class Typewriter {
+    constructor(element, words, typingSpeed = 100, deletingSpeed = 50, pauseTime = 2000) {
+        this.element = element;
+        this.words = words;
+        this.typingSpeed = typingSpeed;
+        this.deletingSpeed = deletingSpeed;
+        this.pauseTime = pauseTime;
+        this.wordIndex = 0;
+        this.charIndex = 0;
+        this.isDeleting = false;
+        this.isRunning = false;
+    }
+
+    start() {
+        this.isRunning = true;
+        this.type();
+    }
+
+    stop() {
+        this.isRunning = false;
+    }
+
+    updateWords(newWords) {
+        this.words = newWords;
+        this.wordIndex = 0;
+        this.charIndex = 0;
+        this.isDeleting = false;
+    }
+
+    type() {
+        if (!this.isRunning) return;
+
+        const currentWord = this.words[this.wordIndex];
+
+        if (this.isDeleting) {
+            this.element.textContent = currentWord.substring(0, this.charIndex - 1);
+            this.charIndex--;
+        } else {
+            this.element.textContent = currentWord.substring(0, this.charIndex + 1);
+            this.charIndex++;
+        }
+
+        let delay = this.isDeleting ? this.deletingSpeed : this.typingSpeed;
+
+        if (!this.isDeleting && this.charIndex === currentWord.length) {
+            delay = this.pauseTime;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.charIndex === 0) {
+            this.isDeleting = false;
+            this.wordIndex = (this.wordIndex + 1) % this.words.length;
+            delay = 500;
+        }
+
+        setTimeout(() => this.type(), delay);
+    }
+}
+
+// Update typewriter when language changes
+function updateTypewriter() {
+    if (typewriterInstance) {
+        const words = siteData.hero[currentLang].typewriterWords || [
+            siteData.hero[currentLang].subtitle
+        ];
+        typewriterInstance.updateWords(words);
+    }
+}
+
+/* --------------------------------------------------------------------------
+   GitHub API Integration
+   -------------------------------------------------------------------------- */
+const GITHUB_USERNAME = 'mrtinsjoao';
+const GITHUB_CACHE_KEY = 'jv-github-data';
+const GITHUB_CACHE_DURATION = 1000 * 60 * 30; // 30 minutes
+
+async function loadGitHubData() {
+    // Check cache first
+    const cached = localStorage.getItem(GITHUB_CACHE_KEY);
+    if (cached) {
+        const { data, timestamp } = JSON.parse(cached);
+        if (Date.now() - timestamp < GITHUB_CACHE_DURATION) {
+            renderGitHubData(data);
+            return;
+        }
+    }
+
+    try {
+        // Fetch user data and repos in parallel
+        const [userRes, reposRes] = await Promise.all([
+            fetch(`https://api.github.com/users/${GITHUB_USERNAME}`),
+            fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`)
+        ]);
+
+        if (!userRes.ok || !reposRes.ok) throw new Error('GitHub API error');
+
+        const user = await userRes.json();
+        const repos = await reposRes.json();
+
+        // Calculate total stars
+        const totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+
+        const data = {
+            user,
+            repos,
+            totalStars
+        };
+
+        // Cache the data
+        localStorage.setItem(GITHUB_CACHE_KEY, JSON.stringify({
+            data,
+            timestamp: Date.now()
+        }));
+
+        renderGitHubData(data);
+    } catch (error) {
+        console.error('Failed to load GitHub data:', error);
+        document.getElementById('github-repos-grid').innerHTML =
+            '<p style="text-align: center; color: var(--color-text-muted);">Unable to load GitHub data</p>';
+    }
+}
+
+function renderGitHubData(data) {
+    const { user, repos, totalStars } = data;
+
+    // Update stats
+    document.getElementById('github-repos').textContent = user.public_repos;
+    document.getElementById('github-stars').textContent = totalStars;
+    document.getElementById('github-followers').textContent = user.followers;
+
+    // Language colors
+    const langColors = {
+        'JavaScript': '#f1e05a',
+        'TypeScript': '#3178c6',
+        'Python': '#3572A5',
+        'HTML': '#e34c26',
+        'CSS': '#563d7c',
+        'Shell': '#89e051',
+        'Java': '#b07219',
+        'Go': '#00ADD8',
+        'Rust': '#dea584',
+        'SQL': '#e38c00'
+    };
+
+    // Render repo cards
+    const reposGrid = document.getElementById('github-repos-grid');
+    reposGrid.innerHTML = repos
+        .filter(repo => !repo.fork) // Only show non-forked repos
+        .slice(0, 6)
+        .map(repo => `
+            <a href="${repo.html_url}" target="_blank" class="github-repo-card">
+                <h4>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    ${repo.name}
+                </h4>
+                <p>${repo.description || 'No description available'}</p>
+                <div class="github-repo-meta">
+                    ${repo.language ? `
+                        <span>
+                            <span class="github-repo-lang" style="background: ${langColors[repo.language] || '#ccc'}"></span>
+                            ${repo.language}
+                        </span>
+                    ` : ''}
+                    <span>⭐ ${repo.stargazers_count}</span>
+                    <span>🍴 ${repo.forks_count}</span>
+                </div>
+            </a>
+        `).join('');
+}
+
+// Load GitHub data on page load
+document.addEventListener('DOMContentLoaded', loadGitHubData);

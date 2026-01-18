@@ -252,6 +252,22 @@ ul {
     color: var(--color-text-secondary);
     font-weight: 400;
     margin-bottom: 24px;
+    min-height: 2rem;
+}
+
+.typewriter {
+    color: var(--color-accent);
+}
+
+.typewriter-cursor {
+    color: var(--color-accent);
+    animation: blink 1s infinite;
+    font-weight: 300;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 .hero-description {
@@ -438,6 +454,28 @@ ul {
 .btn-secondary:hover {
     background: var(--color-bg-tertiary);
     border-color: var(--color-text-muted);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-outline:hover {
+    background: var(--color-accent);
+    color: var(--color-text-primary);
+}
+
+.btn-outline svg {
+    transition: transform var(--transition-fast);
+}
+
+.btn-outline:hover svg {
+    transform: translateY(2px);
 }
 
 /* --------------------------------------------------------------------------
@@ -1236,6 +1274,109 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
+   GitHub Section
+   -------------------------------------------------------------------------- */
+.github {
+    background: var(--color-bg-secondary);
+}
+
+.github-stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.github-stat {
+    text-align: center;
+}
+
+.github-stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 8px;
+}
+
+.github-stat-label {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.github-repos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.github-repo-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    transition: all var(--transition-medium);
+}
+
+.github-repo-card:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+
+.github-repo-card h4 {
+    color: var(--color-accent);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.github-repo-card h4 svg {
+    width: 18px;
+    height: 18px;
+}
+
+.github-repo-card p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.github-repo-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.github-repo-meta span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.github-repo-lang {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.github-cta {
+    text-align: center;
+}
+
+.github-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --------------------------------------------------------------------------
    Clients Section
    -------------------------------------------------------------------------- */
 .clients {
@@ -1413,5 +1554,135 @@ ul {
 
     .contact-buttons {
         flex-direction: column;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Theme Toggle Button
+   -------------------------------------------------------------------------- */
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-tertiary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    color: var(--color-text-secondary);
+}
+
+.theme-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+.theme-toggle svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Show sun icon in dark mode, moon icon in light mode */
+.theme-toggle .sun-icon {
+    display: block;
+}
+
+.theme-toggle .moon-icon {
+    display: none;
+}
+
+[data-theme="light"] .theme-toggle .sun-icon {
+    display: none;
+}
+
+[data-theme="light"] .theme-toggle .moon-icon {
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Light Theme Variables
+   -------------------------------------------------------------------------- */
+[data-theme="light"] {
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f8f9fa;
+    --color-bg-tertiary: #e9ecef;
+    --color-bg-card: #ffffff;
+
+    --color-text-primary: #1a1a1d;
+    --color-text-secondary: #495057;
+    --color-text-muted: #6c757d;
+
+    --color-border: #dee2e6;
+    --color-border-light: #ced4da;
+
+    --color-accent-light: rgba(59, 130, 246, 0.15);
+}
+
+/* Light theme specific adjustments */
+[data-theme="light"] .navbar {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .hero {
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.08) 0%, transparent 40%),
+        var(--color-bg-primary);
+}
+
+[data-theme="light"] .profile-placeholder {
+    background: linear-gradient(135deg, var(--color-bg-tertiary) 0%, var(--color-bg-secondary) 100%);
+}
+
+[data-theme="light"] .nav-toggle span {
+    background: var(--color-text-primary);
+}
+
+[data-theme="light"] .project-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .timeline-marker {
+    background: var(--color-bg-primary);
+}
+
+[data-theme="light"] .btn-primary {
+    color: #ffffff;
+}
+
+[data-theme="light"] .btn-secondary:hover {
+    background: var(--color-bg-tertiary);
+}
+
+/* Smooth theme transition */
+body,
+.navbar,
+.hero,
+.section,
+.project-card,
+.timeline-content,
+.work-card,
+.skill-category,
+.github-repo-card,
+.client-logo,
+.contact-cta,
+.footer {
+    transition: background-color var(--transition-medium),
+                color var(--transition-medium),
+                border-color var(--transition-medium);
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .theme-toggle svg {
+        width: 18px;
+        height: 18px;
     }
 }

@@ -33,6 +33,13 @@ const siteData = {
             experience: 'Experiência',
             projects: 'Projetos',
             workTogether: 'Trabalhe Comigo'
+        },
+        es: {
+            now: 'Inicio',
+            about: 'Sobre Mí',
+            experience: 'Experiencia',
+            projects: 'Proyectos',
+            workTogether: 'Trabajemos Juntos'
         }
     },
 
@@ -45,6 +52,13 @@ const siteData = {
             description: 'I transform data into <strong>strategic decisions</strong>. With over 10 years of experience, I help companies build robust data infrastructures that generate <strong>real business impact</strong>.',
             ctaPrimary: "Let's Talk",
             ctaSecondary: 'View Projects',
+            ctaDownloadCV: 'Download CV',
+            typewriterWords: [
+                'Lead Data Engineer',
+                'Data Architect',
+                'Solutions Architect',
+                'Analytics Expert'
+            ],
             stats: {
                 experience: { number: 'dynamic', label: 'Years of Experience', startYear: 2016 },
                 projects: { number: '+50', label: 'Projects Delivered' },
@@ -58,9 +72,36 @@ const siteData = {
             description: 'Transformo dados em <strong>decisões estratégicas</strong>. Com mais de 10 anos de experiência, ajudo empresas a construir infraestruturas de dados robustas que geram <strong>impacto real no negócio</strong>.',
             ctaPrimary: 'Vamos Conversar',
             ctaSecondary: 'Ver Projetos',
+            ctaDownloadCV: 'Baixar CV',
+            typewriterWords: [
+                'Lead Data Engineer',
+                'Arquiteto de Dados',
+                'Arquiteto de Soluções',
+                'Especialista em Analytics'
+            ],
             stats: {
                 experience: { number: 'dynamic', label: 'Anos de Experiência', startYear: 2016 },
                 projects: { number: '+50', label: 'Projetos Entregues' },
+                languages: { number: '3', label: 'Idiomas' }
+            }
+        },
+        es: {
+            greeting: 'Hola, soy',
+            name: 'João Vitor Martins',
+            subtitle: 'Lead Data Engineer | Arquitecto de Datos | Arquitecto de Soluciones',
+            description: 'Transformo datos en <strong>decisiones estratégicas</strong>. Con más de 10 años de experiencia, ayudo a empresas a construir infraestructuras de datos robustas que generan <strong>impacto real en el negocio</strong>.',
+            ctaPrimary: 'Hablemos',
+            ctaSecondary: 'Ver Proyectos',
+            ctaDownloadCV: 'Descargar CV',
+            typewriterWords: [
+                'Lead Data Engineer',
+                'Arquitecto de Datos',
+                'Arquitecto de Soluciones',
+                'Especialista en Analytics'
+            ],
+            stats: {
+                experience: { number: 'dynamic', label: 'Años de Experiencia', startYear: 2016 },
+                projects: { number: '+50', label: 'Proyectos Entregados' },
                 languages: { number: '3', label: 'Idiomas' }
             }
         }
@@ -119,6 +160,41 @@ const siteData = {
                 { name: 'Espanhol', level: 'Fluente' }
             ],
             skillsTitle: 'Stack & Competências',
+            skills: {
+                dataEngineering: {
+                    title: 'Data Engineering',
+                    items: ['Python', 'SQL', 'Snowflake', 'Databricks', 'AWS Glue', 'Pentaho', 'ETL/ELT']
+                },
+                dataArchitecture: {
+                    title: 'Data Architecture',
+                    items: ['Data Lake', 'Data Warehouse', 'Data Modeling', 'Snowflake', 'AWS Redshift', 'SAP Integration']
+                },
+                biAnalytics: {
+                    title: 'BI & Analytics',
+                    items: ['Qlik Sense', 'QlikView', 'Power BI', 'Tableau', 'Qlik Cloud', 'NPrinting']
+                },
+                cloudTools: {
+                    title: 'Cloud & Tools',
+                    items: ['AWS', 'GCP', 'Snowflake', 'Alteryx', 'SAP BW/4HANA', 'Oracle']
+                }
+            }
+        },
+        es: {
+            title: 'Sobre Mí',
+            intro: "¡Mucho gusto! Puedes llamarme <strong>JV</strong>.",
+            paragraphs: [
+                "Llevo más de <strong>10 años</strong> trabajando con datos, y si miras mi perfil de cerca, encontrarás una amplia experiencia en diferentes industrias - desde salud y farmacéutica hasta automotriz y manufactura.",
+                "Me apasiona resolver problemas y entregar soluciones prácticas. Actualmente trabajo como <strong>Lead Data Engineer en Medtronic</strong> (EE.UU.) y también dirijo mi propia empresa de consultoría, <strong>DadosNow</strong>, donde ayudo a empresas a transformar sus datos en ventaja competitiva.",
+                "Mi experiencia abarca <strong>Arquitectura de Datos</strong>, <strong>Ingeniería de Datos</strong>, <strong>BI & Analytics</strong> y <strong>Soluciones Cloud</strong>. He trabajado con empresas como Novartis, Hospital Sírio-Libanês, Embraer, Ford y Fleury.",
+                "Tengo un <strong>MBA en Tecnología de la Información</strong> de Sirius Educação y una licenciatura en <strong>Ciencia y Tecnología de UNIFESP</strong>."
+            ],
+            languagesTitle: 'Idiomas',
+            languages: [
+                { name: 'Portugués', level: 'Nativo' },
+                { name: 'Inglés', level: 'Fluido' },
+                { name: 'Español', level: 'Fluido' }
+            ],
+            skillsTitle: 'Stack & Habilidades',
             skills: {
                 dataEngineering: {
                     title: 'Data Engineering',
@@ -632,6 +708,50 @@ const siteData = {
         }
     },
 
+    // ==================== GITHUB ====================
+    github: {
+        en: {
+            title: 'Open Source',
+            subtitle: 'My contributions and projects on GitHub',
+            repos: 'Repositories',
+            stars: 'Stars',
+            followers: 'Followers',
+            viewProfile: 'View GitHub Profile'
+        },
+        pt: {
+            title: 'Open Source',
+            subtitle: 'Minhas contribuições e projetos no GitHub',
+            repos: 'Repositórios',
+            stars: 'Estrelas',
+            followers: 'Seguidores',
+            viewProfile: 'Ver Perfil no GitHub'
+        },
+        es: {
+            title: 'Código Abierto',
+            subtitle: 'Mis contribuciones y proyectos en GitHub',
+            repos: 'Repositorios',
+            stars: 'Estrellas',
+            followers: 'Seguidores',
+            viewProfile: 'Ver Perfil en GitHub'
+        }
+    },
+
+    // ==================== CLIENTS ====================
+    clients: {
+        en: {
+            title: 'Trusted By',
+            subtitle: 'Companies I\'ve worked with'
+        },
+        pt: {
+            title: 'Clientes',
+            subtitle: 'Empresas com as quais trabalhei'
+        },
+        es: {
+            title: 'Clientes',
+            subtitle: 'Empresas con las que he trabajado'
+        }
+    },
+
     // ==================== FOOTER ====================
     footer: {
         en: {
@@ -641,6 +761,10 @@ const siteData = {
         pt: {
             tagline: 'Transformando dados em decisões estratégicas.',
             rights: '© 2025 João Vitor Martins. Todos os direitos reservados.'
+        },
+        es: {
+            tagline: 'Transformando datos en decisiones estratégicas.',
+            rights: '© 2025 João Vitor Martins. Todos los derechos reservados.'
         }
     }
 };
