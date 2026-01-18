@@ -494,6 +494,7 @@ let selectedWorkModel = null;
 function initWorkModelSelection() {
     const cards = document.querySelectorAll('.work-card');
     const continueBtn = document.getElementById('work-continue-btn');
+    const modelsContainer = document.getElementById('work-models');
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
@@ -502,6 +503,11 @@ function initWorkModelSelection() {
 
             // Add selection to clicked card
             card.classList.add('selected');
+
+            // Add has-selection class to container (removes featured styling from non-selected)
+            if (modelsContainer) {
+                modelsContainer.classList.add('has-selection');
+            }
 
             // Store selected model
             selectedWorkModel = card.dataset.modelTitle;

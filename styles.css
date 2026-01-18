@@ -824,6 +824,12 @@ ul {
     background: linear-gradient(180deg, var(--color-accent-light) 0%, var(--color-bg-card) 100%);
 }
 
+/* Remove featured border when another card is selected */
+.work-models.has-selection .work-card.featured:not(.selected) {
+    border-color: var(--color-border);
+    background: var(--color-bg-card);
+}
+
 .work-badge {
     position: absolute;
     top: -12px;
