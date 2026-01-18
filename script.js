@@ -719,9 +719,9 @@ function initScrollAnimations() {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(10, 10, 11, 0.95)';
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(10, 10, 11, 0.8)';
+        navbar.classList.remove('scrolled');
     }
 });
 

@@ -139,6 +139,10 @@ ul {
     transition: all var(--transition-medium);
 }
 
+.navbar.scrolled {
+    background: rgba(10, 10, 11, 0.95);
+}
+
 .nav-container {
     max-width: var(--container-max-width);
     margin: 0 auto;
@@ -1623,7 +1627,13 @@ ul {
 
 /* Light theme specific adjustments */
 [data-theme="light"] .navbar {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom-color: var(--color-border);
+}
+
+[data-theme="light"] .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="light"] .hero {
