@@ -458,16 +458,35 @@ function renderWorkTogether() {
             `)
             .join('');
 
-        // Add continue button after the cards
-        const continueBtn = document.createElement('div');
-        continueBtn.className = 'work-continue-wrapper';
-        continueBtn.innerHTML = `
-            <button class="btn btn-primary work-continue-btn" id="work-continue-btn" style="display: none;">
-                <span>${data.continueButton}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </button>
-        `;
-        modelsContainer.after(continueBtn);
+        // Check if continue button wrapper already exists
+        let continueWrapper = document.querySelector('.work-continue-wrapper');
+
+        if (!continueWrapper) {
+            // Create button wrapper only if it doesn't exist
+            continueWrapper = document.createElement('div');
+            continueWrapper.className = 'work-continue-wrapper';
+            continueWrapper.innerHTML = `
+                <button class="btn btn-primary work-continue-btn" id="work-continue-btn" style="display: none;">
+                    <span></span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </button>
+            `;
+            modelsContainer.after(continueWrapper);
+        }
+
+        // Update button text for current language
+        const btnText = continueWrapper.querySelector('span');
+        if (btnText) {
+            btnText.textContent = data.continueButton;
+        }
+
+        // Reset selection state on language change
+        modelsContainer.classList.remove('has-selection');
+        const continueBtn = document.getElementById('work-continue-btn');
+        if (continueBtn) {
+            continueBtn.style.display = 'none';
+        }
+        selectedWorkModel = null;
 
         // Add click handlers for card selection
         initWorkModelSelection();
