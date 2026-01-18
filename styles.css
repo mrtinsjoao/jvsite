@@ -1874,3 +1874,111 @@ body,
         padding: 24px;
     }
 }
+
+/* --------------------------------------------------------------------------
+   Work Model Selection
+   -------------------------------------------------------------------------- */
+.work-card {
+    cursor: pointer;
+    position: relative;
+}
+
+.work-card:hover {
+    transform: translateY(-4px);
+}
+
+.work-select-indicator {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-bg-tertiary);
+    border: 2px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all var(--transition-fast);
+}
+
+.work-select-indicator svg {
+    color: white;
+    opacity: 0;
+}
+
+.work-card:hover .work-select-indicator {
+    opacity: 0.5;
+}
+
+.work-card.selected {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-light);
+}
+
+.work-card.selected .work-select-indicator {
+    opacity: 1;
+    transform: scale(1);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+}
+
+.work-card.selected .work-select-indicator svg {
+    opacity: 1;
+}
+
+.work-continue-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 24px;
+}
+
+.work-continue-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    font-size: 1rem;
+    animation: fadeInUp 0.3s ease;
+}
+
+.work-continue-btn svg {
+    transition: transform var(--transition-fast);
+}
+
+.work-continue-btn:hover svg {
+    transform: translateX(4px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Light mode adjustments */
+[data-theme="light"] .work-card.selected {
+    box-shadow: 0 0 0 3px var(--color-accent-light), 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .work-select-indicator {
+        width: 28px;
+        height: 28px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .work-continue-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -575,6 +575,9 @@ const siteData = {
         en: {
             title: 'How We Can Work Together',
             subtitle: 'Flexible partnership models to meet your needs',
+            selectModel: 'Select a work model',
+            selectedModel: 'Selected model',
+            continueButton: 'Continue with this model',
             models: [
                 {
                     icon: 'person',
@@ -656,6 +659,9 @@ const siteData = {
         pt: {
             title: 'Como Podemos Trabalhar Juntos',
             subtitle: 'Modelos flexíveis de parceria para atender às suas necessidades',
+            selectModel: 'Selecione um modelo de trabalho',
+            selectedModel: 'Modelo selecionado',
+            continueButton: 'Continuar com este modelo',
             models: [
                 {
                     icon: 'person',
@@ -733,6 +739,90 @@ const siteData = {
             formCompany: 'Empresa (opcional)',
             formMessage: 'Como posso ajudar?',
             formSubmit: 'Enviar Mensagem'
+        },
+        es: {
+            title: 'Cómo Podemos Trabajar Juntos',
+            subtitle: 'Modelos flexibles de asociación para satisfacer tus necesidades',
+            selectModel: 'Selecciona un modelo de trabajo',
+            selectedModel: 'Modelo seleccionado',
+            continueButton: 'Continuar con este modelo',
+            models: [
+                {
+                    icon: 'person',
+                    title: 'Contratándome',
+                    description: 'Contratación directa como profesional dedicado a tu proyecto o equipo.',
+                    benefits: [
+                        'Dedicación exclusiva al proyecto',
+                        'Integración con tu equipo',
+                        'Transferencia de conocimiento',
+                        'Soporte continuo'
+                    ],
+                    ideal: 'Ideal para: Proyectos a largo plazo',
+                    featured: false
+                },
+                {
+                    icon: 'company',
+                    title: 'Vía DadosNow',
+                    description: 'Contratación a través de mi empresa de consultoría para proyectos estructurados de datos.',
+                    benefits: [
+                        'Metodología comprobada',
+                        'Experiencia enterprise',
+                        'Entrega con SLA definido',
+                        'Flexibilidad contractual'
+                    ],
+                    ideal: 'Ideal para: Proyectos con alcance definido',
+                    featured: true,
+                    badge: 'Más Popular'
+                },
+                {
+                    icon: 'partnership',
+                    title: 'Asociación por Resultados',
+                    description: 'Desarrollo el proyecto y recibo parte del retorno generado por la solución.',
+                    benefits: [
+                        'Baja inversión inicial',
+                        'Alineación de intereses',
+                        'Compromiso con resultados',
+                        'Asociación a largo plazo'
+                    ],
+                    ideal: 'Ideal para: Startups y proyectos innovadores',
+                    featured: false
+                }
+            ],
+            differentialsTitle: '¿Por qué trabajar conmigo?',
+            differentials: [
+                {
+                    number: '01',
+                    title: '+10 Años de Experiencia',
+                    description: 'Amplia experiencia en industrias de salud, farmacéutica, automotriz y manufactura.'
+                },
+                {
+                    number: '02',
+                    title: 'Track Record Enterprise',
+                    description: 'Proyectos entregados para Medtronic, Novartis, Embraer, Ford, Fleury y Hospital Sírio-Libanês.'
+                },
+                {
+                    number: '03',
+                    title: 'Soluciones End-to-End',
+                    description: 'De Arquitectura de Datos a BI & Analytics - soluciones completas que generan valor al negocio.'
+                },
+                {
+                    number: '04',
+                    title: 'Experiencia Global',
+                    description: 'Trabajo con equipos globales, multilingüe (PT/EN/ES) y comprensión de negocios internacionales.'
+                }
+            ],
+            ctaTitle: '¿Listo para transformar tus datos en resultados?',
+            ctaDescription: 'Hablemos sobre cómo puedo ayudar a tu negocio a crecer con datos.',
+            ctaWhatsapp: 'WhatsApp',
+            ctaSchedule: 'Agendar Llamada',
+            ctaEmail: 'Email',
+            ctaLinkedIn: 'LinkedIn',
+            formTitle: 'O envíame un mensaje',
+            formName: 'Tu Nombre',
+            formEmail: 'Tu Email',
+            formCompany: 'Empresa (opcional)',
+            formMessage: '¿Cómo puedo ayudarte?',
+            formSubmit: 'Enviar Mensaje'
         }
     },
 

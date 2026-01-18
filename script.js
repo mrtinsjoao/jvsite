@@ -439,9 +439,12 @@ function renderWorkTogether() {
     const modelsContainer = document.getElementById('work-models');
     if (modelsContainer) {
         modelsContainer.innerHTML = data.models
-            .map(model => `
-                <div class="work-card${model.featured ? ' featured' : ''}">
+            .map((model, index) => `
+                <div class="work-card${model.featured ? ' featured' : ''}" data-model-index="${index}" data-model-title="${model.title}">
                     ${model.badge ? `<div class="work-badge">${model.badge}</div>` : ''}
+                    <div class="work-select-indicator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    </div>
                     <div class="work-icon">
                         ${icons[model.icon] || icons.person}
                     </div>
@@ -454,6 +457,20 @@ function renderWorkTogether() {
                 </div>
             `)
             .join('');
+
+        // Add continue button after the cards
+        const continueBtn = document.createElement('div');
+        continueBtn.className = 'work-continue-wrapper';
+        continueBtn.innerHTML = `
+            <button class="btn btn-primary work-continue-btn" id="work-continue-btn" style="display: none;">
+                <span>${data.continueButton}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+        `;
+        modelsContainer.after(continueBtn);
+
+        // Add click handlers for card selection
+        initWorkModelSelection();
     }
 
     // Differentials
@@ -468,6 +485,66 @@ function renderWorkTogether() {
                 </div>
             `)
             .join('');
+    }
+}
+
+// Selected work model
+let selectedWorkModel = null;
+
+function initWorkModelSelection() {
+    const cards = document.querySelectorAll('.work-card');
+    const continueBtn = document.getElementById('work-continue-btn');
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            // Remove selection from all cards
+            cards.forEach(c => c.classList.remove('selected'));
+
+            // Add selection to clicked card
+            card.classList.add('selected');
+
+            // Store selected model
+            selectedWorkModel = card.dataset.modelTitle;
+
+            // Show continue button
+            if (continueBtn) {
+                continueBtn.style.display = 'inline-flex';
+            }
+
+            // Track event
+            trackEvent('work_model_select', {
+                event_category: 'engagement',
+                event_label: selectedWorkModel
+            });
+        });
+    });
+
+    // Continue button click handler
+    if (continueBtn) {
+        continueBtn.addEventListener('click', () => {
+            // Scroll to contact form
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Pre-fill the message field with selected model
+                const messageField = contactForm.querySelector('textarea[name="message"]');
+                if (messageField && selectedWorkModel) {
+                    const data = siteData.workTogether[currentLang];
+                    const prefix = currentLang === 'pt' ? 'Olá! Tenho interesse no modelo: ' :
+                                   currentLang === 'es' ? '¡Hola! Me interesa el modelo: ' :
+                                   'Hi! I\'m interested in the model: ';
+                    messageField.value = prefix + selectedWorkModel;
+                    messageField.focus();
+                }
+            }
+
+            // Track event
+            trackEvent('work_model_continue', {
+                event_category: 'engagement',
+                event_label: selectedWorkModel
+            });
+        });
     }
 }
 
