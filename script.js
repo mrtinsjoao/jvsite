@@ -226,6 +226,9 @@ function initLanguage() {
 
     // Update HTML lang attribute
     document.documentElement.lang = currentLang;
+
+    // Apply translations for the initial language
+    updateTranslations();
 }
 
 function setLanguage(lang) {
