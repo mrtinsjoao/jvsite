@@ -258,7 +258,7 @@ function updateDynamicYears() {
     const yearsOfExperience = currentYear - startYear;
 
     // Update the experience stat number
-    const experienceStat = document.querySelector('[data-i18n="hero.stats.experience.number"]');
+    const experienceStat = document.getElementById('experience-years');
     if (experienceStat) {
         experienceStat.textContent = '+' + yearsOfExperience;
     }
@@ -268,8 +268,7 @@ function updateTranslations() {
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
         const translation = getTranslation(key);
-        // Skip 'dynamic' values - they are handled by updateDynamicYears()
-        if (translation && translation !== 'dynamic') {
+        if (translation) {
             el.innerHTML = translation;
         }
     });
