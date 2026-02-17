@@ -453,8 +453,7 @@ const siteData = {
                     ]
                 }
             ]
-        }
-    },
+        },
 
         es: {
             title: 'Experiencia',
@@ -673,6 +672,56 @@ const siteData = {
                     description: 'Liderei migração intercloud de servidores de AWS para Oracle Cloud Infrastructure no Hospital Sírio-Libanês com zero downtime.',
                     tags: ['AWS', 'OCI', 'Migração', 'Saúde'],
                     result: 'Migração seamless com alta disponibilidade'
+                }
+            ]
+        },
+
+        es: {
+            title: 'Proyectos',
+            subtitle: 'Principales proyectos entregados y resultados medibles alcanzados',
+            resultLabel: 'Resultado:',
+            items: [
+                {
+                    icon: 'lakehouse',
+                    title: 'Plataforma Global de Datos - Snowflake',
+                    description: 'Lideré implementación de plataforma de datos enterprise en Novartis, integrando fuentes de datos globales y habilitando analytics cross-system.',
+                    tags: ['Snowflake', 'SAP', 'Power BI', 'Global'],
+                    result: 'Acceso unificado de datos para equipos globales'
+                },
+                {
+                    icon: 'pipeline',
+                    title: 'Arquitectura Data Lake - AWS',
+                    description: 'Diseñé toda la solución técnica y lideré la implementación de una nueva arquitectura de Data Lake para Solidaridad, incluyendo automatización Python, pipelines ETL AWS Glue y queries Athena.',
+                    tags: ['AWS Glue', 'Athena', 'Python', 'S3'],
+                    result: 'Diseño técnico e implementación end-to-end'
+                },
+                {
+                    icon: 'bi',
+                    title: 'Fusión Fleury + Pardini',
+                    description: 'Lideré reestructuración y unificación de los ambientes Qlik Sense y Qlik Cloud tras la fusión de dos grandes empresas de salud.',
+                    tags: ['Qlik Sense', 'Qlik Cloud', 'Migración', 'Salud'],
+                    result: 'Ambiente analytics unificado post-fusión'
+                },
+                {
+                    icon: 'governance',
+                    title: 'Consolidación Servidores MFA',
+                    description: 'Unifiqué exitosamente 48 servidores Active Directory MFA en un único ambiente en SONDA/Embraer.',
+                    tags: ['Infraestructura', 'Active Directory', 'Seguridad'],
+                    result: 'Entregado en 5 días (planificado para 3 meses)'
+                },
+                {
+                    icon: 'bi',
+                    title: 'Ford LATAM Analytics',
+                    description: 'Desarrollé dashboard KPI unificado para concesionarios en Brasil y Argentina con portal de acceso basado en credenciales.',
+                    tags: ['Qlik Sense', 'Qlik Cloud', 'KPIs', 'LATAM'],
+                    result: 'Analytics para equipos globales BR/AR'
+                },
+                {
+                    icon: 'pipeline',
+                    title: 'Migración Cloud AWS a OCI',
+                    description: 'Lideré migración intercloud de servidores de AWS a Oracle Cloud Infrastructure en Hospital Sírio-Libanês con cero downtime.',
+                    tags: ['AWS', 'OCI', 'Migración', 'Salud'],
+                    result: 'Migración seamless con alta disponibilidad'
                 }
             ]
         }

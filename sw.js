@@ -1,5 +1,5 @@
 // Service Worker for JV Martins Portfolio
-const CACHE_NAME = 'jv-portfolio-v1';
+const CACHE_NAME = 'jv-portfolio-v2';
 const urlsToCache = [
   '/',
   '/index.html',
