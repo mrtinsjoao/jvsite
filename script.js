@@ -6,13 +6,7 @@
 // Register Service Worker for PWA
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('SW registered:', registration.scope);
-            })
-            .catch(error => {
-                console.log('SW registration failed:', error);
-            });
+        navigator.serviceWorker.register('/sw.js').catch(() => {});
     });
 }
 
@@ -253,7 +247,7 @@ function setLanguage(lang) {
    Dynamic Years Calculation
    -------------------------------------------------------------------------- */
 function updateDynamicYears() {
-    const startYear = 2016;
+    const startYear = siteData.hero[currentLang].stats.experience.startYear || 2016;
     const currentYear = new Date().getFullYear();
     const yearsOfExperience = currentYear - startYear;
 
@@ -449,12 +443,12 @@ function renderWorkTogether() {
     if (modelsContainer) {
         modelsContainer.innerHTML = data.models
             .map((model, index) => `
-                <div class="work-card${model.featured ? ' featured' : ''}" data-model-index="${index}" data-model-title="${model.title}">
+                <button class="work-card${model.featured ? ' featured' : ''}" type="button" data-model-index="${index}" data-model-title="${model.title}" aria-pressed="false">
                     ${model.badge ? `<div class="work-badge">${model.badge}</div>` : ''}
-                    <div class="work-select-indicator">
+                    <div class="work-select-indicator" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                     </div>
-                    <div class="work-icon">
+                    <div class="work-icon" aria-hidden="true">
                         ${icons[model.icon] || icons.person}
                     </div>
                     <h3>${model.title}</h3>
@@ -463,7 +457,7 @@ function renderWorkTogether() {
                         ${model.benefits.map(b => `<li>${b}</li>`).join('')}
                     </ul>
                     <span class="work-ideal">${model.ideal}</span>
-                </div>
+                </button>
             `)
             .join('');
 
@@ -527,10 +521,14 @@ function initWorkModelSelection() {
     cards.forEach(card => {
         card.addEventListener('click', () => {
             // Remove selection from all cards
-            cards.forEach(c => c.classList.remove('selected'));
+            cards.forEach(c => {
+                c.classList.remove('selected');
+                c.setAttribute('aria-pressed', 'false');
+            });
 
             // Add selection to clicked card
             card.classList.add('selected');
+            card.setAttribute('aria-pressed', 'true');
 
             // Add has-selection class to container (removes featured styling from non-selected)
             if (modelsContainer) {
@@ -595,7 +593,10 @@ function renderBlog() {
         article: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>`
     };
 
+    const blogCta = document.querySelector('.blog-cta');
+
     if (data.articles && data.articles.length > 0) {
+        if (blogCta) blogCta.style.display = 'none';
         grid.innerHTML = data.articles.map(article => `
             <a href="${article.url}" class="blog-card" ${article.url !== '#' ? 'target="_blank"' : ''}>
                 <div class="blog-card-header">
@@ -615,6 +616,7 @@ function renderBlog() {
             </a>
         `).join('');
     } else {
+        if (blogCta) blogCta.style.display = '';
         grid.innerHTML = `
             <div class="blog-empty">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -795,37 +797,10 @@ function initScrollAnimations() {
             observer.observe(el);
         });
     }, 100);
-
-    // Add CSS for animations
-    const style = document.createElement('style');
-    style.textContent = `
-        .animate-element {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        .animate-element.animate-in {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .timeline-item.animate-element { transition-delay: 0.1s; }
-        .project-card.animate-element:nth-child(1) { transition-delay: 0s; }
-        .project-card.animate-element:nth-child(2) { transition-delay: 0.1s; }
-        .project-card.animate-element:nth-child(3) { transition-delay: 0.2s; }
-        .project-card.animate-element:nth-child(4) { transition-delay: 0.3s; }
-        .work-card.animate-element:nth-child(1) { transition-delay: 0s; }
-        .work-card.animate-element:nth-child(2) { transition-delay: 0.15s; }
-        .work-card.animate-element:nth-child(3) { transition-delay: 0.3s; }
-        .skill-category.animate-element:nth-child(1) { transition-delay: 0s; }
-        .skill-category.animate-element:nth-child(2) { transition-delay: 0.1s; }
-        .skill-category.animate-element:nth-child(3) { transition-delay: 0.2s; }
-        .skill-category.animate-element:nth-child(4) { transition-delay: 0.3s; }
-    `;
-    document.head.appendChild(style);
 }
 
 /* --------------------------------------------------------------------------
-   Navbar Background on Scroll
+   Navbar Background on Scroll + WhatsApp Float Visibility
    -------------------------------------------------------------------------- */
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
@@ -833,6 +808,36 @@ window.addEventListener('scroll', () => {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
+    }
+
+    const whatsappFloat = document.getElementById('whatsapp-float');
+    if (whatsappFloat) {
+        if (window.scrollY > 400) {
+            whatsappFloat.classList.add('visible');
+        } else {
+            whatsappFloat.classList.remove('visible');
+        }
+    }
+
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        if (window.scrollY > 600) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    }
+});
+
+/* --------------------------------------------------------------------------
+   Back to Top click handler
+   -------------------------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     }
 });
 
@@ -896,7 +901,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalText = submitBtn.innerHTML;
 
             // Show loading state
-            submitBtn.innerHTML = '<span>Sending...</span>';
+            const sendingText = currentLang === 'pt' ? 'Enviando...' : currentLang === 'es' ? 'Enviando...' : 'Sending...';
+            submitBtn.innerHTML = `<span>${sendingText}</span>`;
             submitBtn.disabled = true;
 
             try {
@@ -911,6 +917,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (response.ok) {
                     status.textContent = currentLang === 'pt'
                         ? 'Mensagem enviada com sucesso!'
+                        : currentLang === 'es'
+                        ? '¡Mensaje enviado con éxito!'
                         : 'Message sent successfully!';
                     status.className = 'form-status success';
                     form.reset();
@@ -920,6 +928,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 status.textContent = currentLang === 'pt'
                     ? 'Erro ao enviar. Tente novamente.'
+                    : currentLang === 'es'
+                    ? 'Error al enviar. Inténtalo de nuevo.'
                     : 'Error sending. Please try again.';
                 status.className = 'form-status error';
             }
@@ -1123,5 +1133,26 @@ function renderGitHubData(data) {
         `).join('');
 }
 
+function showGitHubSkeleton() {
+    const reposGrid = document.getElementById('github-repos-grid');
+    if (reposGrid) {
+        reposGrid.innerHTML = Array(6).fill('').map(() => `
+            <div class="github-repo-card skeleton-card">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-meta"></div>
+            </div>
+        `).join('');
+    }
+    ['github-repos', 'github-stars', 'github-followers'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = '<span class="skeleton skeleton-number"></span>';
+    });
+}
+
 // Load GitHub data on page load
-document.addEventListener('DOMContentLoaded', loadGitHubData);
+document.addEventListener('DOMContentLoaded', () => {
+    showGitHubSkeleton();
+    loadGitHubData();
+});
