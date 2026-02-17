@@ -456,6 +456,126 @@ const siteData = {
         }
     },
 
+        es: {
+            title: 'Experiencia',
+            subtitle: 'Trayectoria profesional e impactos generados en diferentes industrias',
+            impactsLabel: 'Principales Contribuciones:',
+            timeline: [
+                {
+                    company: 'Medtronic',
+                    role: 'Lead Data Engineer',
+                    period: 'Jun 2025 - Presente',
+                    location: 'Estados Unidos',
+                    description: 'Liderando iniciativas de ingeniería de datos en una de las mayores empresas de tecnología médica del mundo.',
+                    impacts: [
+                        'Creación y gestión de pipelines en ambiente Snowflake',
+                        'Diseño y estructuración de proyectos de ingeniería de datos',
+                        'Construcción de dataflows en Power BI con integraciones de API Microsoft',
+                        'Conexión con tablas SAP (SAP BW, SAC, Datasphere) - Creación de tablas FACT y DIM',
+                        'Liderazgo de Data Engineering para equipo de Operations Innovation'
+                    ]
+                },
+                {
+                    company: 'DadosNow',
+                    role: 'Director de TI / Arquitecto de Soluciones',
+                    period: 'Nov 2021 - Presente',
+                    location: 'São Paulo, Brasil',
+                    description: 'Fundador y director de mi propia empresa de consultoría, entregando soluciones de datos a clientes enterprise.',
+                    impacts: [
+                        '<strong>Prime Energy (Shell Company) - Data Architect:</strong> Diseñé arquitectura completa de Data Lake utilizando modelo Medallion (Bronze/Silver/Gold). Lideré proyecto de implementación y coordiné equipo de desarrolladores. CI/CD y metodologías Kanban/Scrum. Construí fundación para futuras integraciones de IA, Machine Learning y APIs',
+                        '<strong>Shoulder (Fashion Retail):</strong> Arquitectura de datos y soluciones analytics para uno de los mayores retailers de moda de Brasil',
+                        '<strong>Solidaridad:</strong> Diseñé e implementé nueva arquitectura de Data Lake con AWS Glue y Athena',
+                        '<strong>Fleury:</strong> Lideré reestructuración y unificación de los ambientes Pardini y Fleury tras la fusión',
+                        '<strong>Ford LATAM:</strong> Entregué soluciones analytics para equipos globales, construí dashboard KPI unificado Brasil/Argentina',
+                        '<strong>Vipal:</strong> Gestioné ambientes QlikView, reestructuré uso de licencias reduciendo costos'
+                    ]
+                },
+                {
+                    company: 'Novartis Brasil',
+                    role: 'Data Architect',
+                    period: 'Jul 2023 - Jun 2025',
+                    location: 'São Paulo, Brasil',
+                    description: 'Arquitecto de Soluciones liderando proyectos globales de datos y gestionando ambientes de BI.',
+                    impacts: [
+                        'Lideré implementación de proyecto global de datos usando Snowflake',
+                        'Colaboré con equipo global para disponibilizar nuevos datos entre sistemas',
+                        'Gestioné ambientes Qlik Sense y Power BI',
+                        'Desarrollé aplicaciones de monitoreo de distribución de mercado con equipo de Business Insights',
+                        'Procesé y optimicé datos IQVIA con reglas de negocio locales y dashboards'
+                    ]
+                },
+                {
+                    company: 'Hospital Sírio-Libanês',
+                    role: 'Data Specialist',
+                    period: 'Oct 2021 - Jul 2023',
+                    location: 'São Paulo, Brasil',
+                    description: 'Lideré proyectos innovadores de BI y migraciones cloud en uno de los mayores hospitales de América Latina.',
+                    impacts: [
+                        'Lideré desarrollo de proyectos de BI usando Power BI y Qlik Sense',
+                        'Planifiqué y ejecuté migraciones de servidores QlikView/Qlik Sense',
+                        'Supervisé migración completa de QlikView/Qlik Sense a Power BI',
+                        'Diseñé nuevas estructuras de tablas en AWS Redshift como Data Engineer',
+                        'Lideré migración intercloud de AWS a Oracle Cloud Infrastructure (OCI)'
+                    ]
+                },
+                {
+                    company: 'Shoulder',
+                    role: 'Business Analyst',
+                    period: 'Jul 2021 - Abr 2023',
+                    location: 'São Paulo, Brasil',
+                    description: 'Lideré desarrollo estratégico de aplicaciones de BI en uno de los mayores retailers de moda de Brasil.',
+                    impacts: [
+                        'Lideré desarrollo estratégico de aplicaciones QlikView y Qlik Sense con integración SQL Server',
+                        'Gestioné ciclo completo de proyectos del concepto a la entrega, creando dashboards data-driven',
+                        'Administré servidores Qlik garantizando performance, estabilidad y confiabilidad',
+                        'Diseñé e implementé procesos de automatización en SQL y Qlik, optimizando flujos de datos',
+                        '<strong>Proyecto Clave:</strong> Construí estructura de CRM para targeting de clientes potenciales y campañas de marketing personalizadas'
+                    ]
+                },
+                {
+                    company: 'SONDA',
+                    role: 'Analytics Senior',
+                    period: 'Sep 2019 - Jul 2021',
+                    location: 'São José dos Campos, Brasil',
+                    description: 'Tech Lead en consultoría especializada en Qlik, responsable de priorización y entrega de proyectos.',
+                    impacts: [
+                        '<strong>Embraer/Boeing Carveout:</strong> Lideré separación de ambiente Qlik y limpieza de datos',
+                        '<strong>Consolidación Servidores MFA:</strong> Unifiqué 48 servidores AD MFA en 5 días (planificado para 3 meses)',
+                        'Diseñé procesos ETL usando Pentaho para ambientes complejos de Data Warehouse',
+                        'Entregué proyectos de integración de datos usando tablas SAP ECC/4HANA',
+                        'Construí dashboards Power BI con integraciones SQL en tiempo real'
+                    ]
+                },
+                {
+                    company: 'Uniodonto São José dos Campos',
+                    role: 'Business Data Analyst',
+                    period: 'Dic 2018 - Sep 2019',
+                    location: 'São José dos Campos, Brasil',
+                    description: 'Lideré iniciativas de BI y optimización de procesos en una de las mayores cooperativas odontológicas de la región.',
+                    impacts: [
+                        'Desarrollé aplicaciones y KPIs usando QlikView y Qlik Sense',
+                        'Administré servidores QlikView y Qlik Sense',
+                        'Lideré iniciativas de optimización de procesos usando QlikView',
+                        '<strong>Logro Destacado:</strong> Entregué proyecto de alto impacto generando R$ 250.000 en valor inmediato al negocio'
+                    ]
+                },
+                {
+                    company: 'Embraer',
+                    role: 'Pasante de TI (Data Analyst)',
+                    period: 'Oct 2017 - Dic 2018',
+                    location: 'São José dos Campos, Brasil',
+                    description: 'Inicié mi carrera en datos en uno de los mayores fabricantes de aeronaves del mundo.',
+                    impacts: [
+                        'Desarrollé aplicaciones de BI usando QlikView',
+                        'Gestioné y di soporte a Bases de Datos Oracle',
+                        'Creé robots de automatización en VBS y C#',
+                        'Apoyé desarrollo de portal PHP y JavaScript'
+                    ]
+                }
+            ]
+        }
+    },
+
     // ==================== PROJECTS ====================
     projects: {
         en: {
@@ -555,18 +675,6 @@ const siteData = {
                     result: 'Migração seamless com alta disponibilidade'
                 }
             ]
-        }
-    },
-
-    // ==================== CLIENTS ====================
-    clients: {
-        en: {
-            title: 'Trusted By',
-            subtitle: 'Companies I\'ve worked with'
-        },
-        pt: {
-            title: 'Empresas que Confiam',
-            subtitle: 'Empresas com as quais trabalhei'
         }
     },
 
@@ -983,15 +1091,15 @@ const siteData = {
     footer: {
         en: {
             tagline: 'Transforming data into strategic decisions.',
-            rights: '© 2025 João Vitor Martins. All rights reserved.'
+            rights: '© 2026 João Vitor Martins. All rights reserved.'
         },
         pt: {
             tagline: 'Transformando dados em decisões estratégicas.',
-            rights: '© 2025 João Vitor Martins. Todos os direitos reservados.'
+            rights: '© 2026 João Vitor Martins. Todos os direitos reservados.'
         },
         es: {
             tagline: 'Transformando datos en decisiones estratégicas.',
-            rights: '© 2025 João Vitor Martins. Todos los derechos reservados.'
+            rights: '© 2026 João Vitor Martins. Todos los derechos reservados.'
         }
     }
 };

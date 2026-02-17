@@ -1229,6 +1229,15 @@ ul {
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
     z-index: 999;
     transition: all var(--transition-medium);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+}
+
+.whatsapp-float.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
 }
 
 .whatsapp-float:hover {
@@ -1987,4 +1996,96 @@ body,
         width: 100%;
         justify-content: center;
     }
+}
+
+/* --------------------------------------------------------------------------
+   Work Card as Button Reset
+   -------------------------------------------------------------------------- */
+button.work-card {
+    font-family: var(--font-family);
+    font-size: inherit;
+    text-align: center;
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* --------------------------------------------------------------------------
+   Scroll Animations (moved from JS injection)
+   -------------------------------------------------------------------------- */
+.animate-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-element.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item.animate-element { transition-delay: 0.1s; }
+.project-card.animate-element:nth-child(1) { transition-delay: 0s; }
+.project-card.animate-element:nth-child(2) { transition-delay: 0.1s; }
+.project-card.animate-element:nth-child(3) { transition-delay: 0.2s; }
+.project-card.animate-element:nth-child(4) { transition-delay: 0.3s; }
+.work-card.animate-element:nth-child(1) { transition-delay: 0s; }
+.work-card.animate-element:nth-child(2) { transition-delay: 0.15s; }
+.work-card.animate-element:nth-child(3) { transition-delay: 0.3s; }
+.skill-category.animate-element:nth-child(1) { transition-delay: 0s; }
+.skill-category.animate-element:nth-child(2) { transition-delay: 0.1s; }
+.skill-category.animate-element:nth-child(3) { transition-delay: 0.2s; }
+.skill-category.animate-element:nth-child(4) { transition-delay: 0.3s; }
+
+/* --------------------------------------------------------------------------
+   GitHub Skeleton Loading
+   -------------------------------------------------------------------------- */
+@keyframes skeleton-shimmer {
+    0% { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+}
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--color-bg-tertiary) 25%,
+        var(--color-border) 37%,
+        var(--color-bg-tertiary) 63%
+    );
+    background-size: 800px 100%;
+    animation: skeleton-shimmer 1.4s infinite linear;
+    border-radius: var(--radius-sm);
+}
+
+.skeleton-card {
+    pointer-events: none;
+}
+
+.skeleton-title {
+    height: 20px;
+    width: 60%;
+    margin-bottom: 12px;
+}
+
+.skeleton-text {
+    height: 14px;
+    width: 90%;
+    margin-bottom: 8px;
+}
+
+.skeleton-text.short {
+    width: 70%;
+}
+
+.skeleton-meta {
+    height: 14px;
+    width: 50%;
+    margin-top: 16px;
+}
+
+.skeleton-number {
+    display: inline-block;
+    height: 2.5rem;
+    width: 60px;
+    border-radius: var(--radius-sm);
 }
