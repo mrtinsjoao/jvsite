@@ -818,6 +818,27 @@ window.addEventListener('scroll', () => {
             whatsappFloat.classList.remove('visible');
         }
     }
+
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        if (window.scrollY > 600) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    }
+});
+
+/* --------------------------------------------------------------------------
+   Back to Top click handler
+   -------------------------------------------------------------------------- */
+document.addEventListener('DOMContentLoaded', () => {
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
 
 /* --------------------------------------------------------------------------
@@ -880,7 +901,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const originalText = submitBtn.innerHTML;
 
             // Show loading state
-            submitBtn.innerHTML = '<span>Sending...</span>';
+            const sendingText = currentLang === 'pt' ? 'Enviando...' : currentLang === 'es' ? 'Enviando...' : 'Sending...';
+            submitBtn.innerHTML = `<span>${sendingText}</span>`;
             submitBtn.disabled = true;
 
             try {

@@ -62,7 +62,7 @@ const siteData = {
             stats: {
                 experience: { number: 'dynamic', label: 'Years of Experience', startYear: 2016 },
                 projects: { number: '+50', label: 'Projects Delivered' },
-                languages: { number: '3', label: 'Languages' }
+                languages: { number: '+8', label: 'Industries' }
             }
         },
         pt: {
@@ -82,7 +82,7 @@ const siteData = {
             stats: {
                 experience: { number: 'dynamic', label: 'Anos de Experiência', startYear: 2016 },
                 projects: { number: '+50', label: 'Projetos Entregues' },
-                languages: { number: '3', label: 'Idiomas' }
+                languages: { number: '+8', label: 'Indústrias' }
             }
         },
         es: {
@@ -102,7 +102,7 @@ const siteData = {
             stats: {
                 experience: { number: 'dynamic', label: 'Años de Experiencia', startYear: 2016 },
                 projects: { number: '+50', label: 'Proyectos Entregados' },
-                languages: { number: '3', label: 'Idiomas' }
+                languages: { number: '+8', label: 'Industrias' }
             }
         }
     },
@@ -1046,24 +1046,24 @@ const siteData = {
     // ==================== GITHUB ====================
     github: {
         en: {
-            title: 'Open Source',
-            subtitle: 'My contributions and projects on GitHub',
+            title: 'GitHub',
+            subtitle: 'Repositories, contributions and activity on GitHub',
             repos: 'Repositories',
             stars: 'Stars',
             followers: 'Followers',
             viewProfile: 'View GitHub Profile'
         },
         pt: {
-            title: 'Open Source',
-            subtitle: 'Minhas contribuições e projetos no GitHub',
+            title: 'GitHub',
+            subtitle: 'Repositórios, contribuições e atividade no GitHub',
             repos: 'Repositórios',
             stars: 'Estrelas',
             followers: 'Seguidores',
             viewProfile: 'Ver Perfil no GitHub'
         },
         es: {
-            title: 'Código Abierto',
-            subtitle: 'Mis contribuciones y proyectos en GitHub',
+            title: 'GitHub',
+            subtitle: 'Repositorios, contribuciones y actividad en GitHub',
             repos: 'Repositorios',
             stars: 'Estrellas',
             followers: 'Seguidores',

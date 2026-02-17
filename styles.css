@@ -1212,6 +1212,52 @@ ul {
 }
 
 /* --------------------------------------------------------------------------
+   Back to Top Button
+   -------------------------------------------------------------------------- */
+.back-to-top {
+    position: fixed;
+    bottom: 88px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    z-index: 998;
+    transition: all var(--transition-medium);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8) translateY(10px);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+    color: white;
+    transform: scale(1.05) translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 80px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* --------------------------------------------------------------------------
    WhatsApp Float Button
    -------------------------------------------------------------------------- */
 .whatsapp-float {

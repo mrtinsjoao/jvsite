@@ -80,6 +80,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -189,9 +190,7 @@
             <h2 class="section-title" data-i18n="about.title">About</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro" data-i18n="about.intro">
-                        Nice to meet you! You can call me <strong>JV</strong>.
-                    </p>
+                    <p class="about-intro" data-i18n="about.intro"></p>
                     <div id="about-paragraphs"></div>
                     <div class="about-languages">
                         <h3 data-i18n="about.languagesTitle">Languages</h3>
@@ -402,6 +401,13 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
     <!-- WhatsApp Float Button -->
     <a href="#" id="whatsapp-float" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contact via WhatsApp">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
@@ -409,6 +415,5 @@
         </svg>
     </a>
 
-    <script src="script.js"></script>
 </body>
 </html>
