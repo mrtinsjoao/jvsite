@@ -48,9 +48,17 @@
         "knowsLanguage": ["Portuguese", "English", "Spanish"],
         "sameAs": [
             "https://www.linkedin.com/in/mrtinsjoao/",
-            "https://github.com/mrtinsjoao"
+            "https://github.com/mrtinsjoao",
+            "https://www.usejarvis.app"
         ],
-        "email": "mrtins.joao@gmail.com"
+        "email": "mrtins.joao@gmail.com",
+        "areaServed": ["Brazil", "United States", "Global"],
+        "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Master in Data Science and AI",
+            "credentialCategory": "MBA",
+            "recognizedBy": { "@type": "Organization", "name": "Sirius Educação" }
+        }
     }
     </script>
 
@@ -86,6 +94,8 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -129,7 +139,7 @@
     </nav>
 
     <!-- Section: Now (Hero) -->
-    <section id="now" class="section hero">
+    <section id="now" class="section hero" id="main-content">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
@@ -173,7 +183,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="image-wrapper">
-                        <img src="assets/jv-optimized.jpg" alt="João Vitor Martins - Lead Data Engineer" class="profile-photo" loading="lazy" width="380" height="450">
+                        <img src="assets/jv-optimized.jpg" alt="João Vitor Martins - Lead Data Engineer" class="profile-photo" loading="lazy" decoding="async" width="380" height="450">
                         <div class="image-decoration"></div>
                     </div>
                 </div>
@@ -223,42 +233,6 @@
             <h2 class="section-title" data-i18n="projects.title">Projects</h2>
             <p class="section-subtitle" data-i18n="projects.subtitle">Some projects I developed and the results achieved</p>
             <div class="projects-grid" id="projects-grid"></div>
-        </div>
-    </section>
-
-    <!-- Section: GitHub -->
-    <section id="github" class="section github">
-        <div class="container">
-            <h2 class="section-title" data-i18n="github.title">Open Source</h2>
-            <p class="section-subtitle" data-i18n="github.subtitle">My contributions and projects on GitHub</p>
-
-            <div class="github-stats" id="github-stats">
-                <div class="github-stat">
-                    <span class="github-stat-number" id="github-repos">-</span>
-                    <span class="github-stat-label" data-i18n="github.repos">Repositories</span>
-                </div>
-                <div class="github-stat">
-                    <span class="github-stat-number" id="github-stars">-</span>
-                    <span class="github-stat-label" data-i18n="github.stars">Stars</span>
-                </div>
-                <div class="github-stat">
-                    <span class="github-stat-number" id="github-followers">-</span>
-                    <span class="github-stat-label" data-i18n="github.followers">Followers</span>
-                </div>
-            </div>
-
-            <div class="github-repos-grid" id="github-repos-grid">
-                <!-- Repos loaded via JS -->
-            </div>
-
-            <div class="github-cta">
-                <a href="https://github.com/mrtinsjoao" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    <span data-i18n="github.viewProfile">View GitHub Profile</span>
-                </a>
-            </div>
         </div>
     </section>
 
@@ -363,16 +337,20 @@
                             <input type="hidden" name="_subject" value="Novo contato do site JV Martins">
                             <input type="text" name="_gotcha" style="display:none">
                             <div class="form-group">
-                                <input type="text" name="name" required placeholder="Your Name" data-i18n-placeholder="workTogether.formName">
+                                <label for="form-name" class="sr-only">Your Name</label>
+                                <input type="text" id="form-name" name="name" required placeholder="Your Name" data-i18n-placeholder="workTogether.formName">
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" required placeholder="Your Email" data-i18n-placeholder="workTogether.formEmail">
+                                <label for="form-email" class="sr-only">Your Email</label>
+                                <input type="email" id="form-email" name="email" required placeholder="Your Email" data-i18n-placeholder="workTogether.formEmail">
                             </div>
                             <div class="form-group">
-                                <input type="text" name="company" placeholder="Company (optional)" data-i18n-placeholder="workTogether.formCompany">
+                                <label for="form-company" class="sr-only">Company</label>
+                                <input type="text" id="form-company" name="company" placeholder="Company (optional)" data-i18n-placeholder="workTogether.formCompany">
                             </div>
                             <div class="form-group">
-                                <textarea name="message" rows="4" required placeholder="How can I help you?" data-i18n-placeholder="workTogether.formMessage"></textarea>
+                                <label for="form-message" class="sr-only">Message</label>
+                                <textarea id="form-message" name="message" rows="4" required placeholder="How can I help you?" data-i18n-placeholder="workTogether.formMessage"></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary btn-submit">
                                 <span data-i18n="workTogether.formSubmit">Send Message</span>

@@ -559,18 +559,15 @@ function initWorkModelSelection() {
         });
     });
 
-    // Continue button click handler
+    // Continue button click handler — use onclick to prevent duplicate listeners on language change
     if (continueBtn) {
-        continueBtn.addEventListener('click', () => {
-            // Scroll to contact form
+        continueBtn.onclick = () => {
             const contactForm = document.getElementById('contact-form');
             if (contactForm) {
                 contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-                // Pre-fill the message field with selected model
                 const messageField = contactForm.querySelector('textarea[name="message"]');
                 if (messageField && selectedWorkModel) {
-                    const data = siteData.workTogether[currentLang];
                     const prefix = currentLang === 'pt' ? 'Olá! Tenho interesse no modelo: ' :
                                    currentLang === 'es' ? '¡Hola! Me interesa el modelo: ' :
                                    'Hi! I\'m interested in the model: ';
@@ -578,13 +575,11 @@ function initWorkModelSelection() {
                     messageField.focus();
                 }
             }
-
-            // Track event
             trackEvent('work_model_continue', {
                 event_category: 'engagement',
                 event_label: selectedWorkModel
             });
-        });
+        };
     }
 }
 
@@ -902,8 +897,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const status = document.getElementById('form-status');
 
     if (form) {
+        let isSubmitting = false;
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
+            if (isSubmitting) return;
+            isSubmitting = true;
 
             const submitBtn = form.querySelector('.btn-submit');
             const originalText = submitBtn.innerHTML;
@@ -944,6 +942,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
+            isSubmitting = false;
 
             // Clear status after 5 seconds
             setTimeout(() => {
@@ -1038,129 +1037,3 @@ function updateTypewriter() {
     }
 }
 
-/* --------------------------------------------------------------------------
-   GitHub API Integration
-   -------------------------------------------------------------------------- */
-const GITHUB_USERNAME = 'mrtinsjoao';
-const GITHUB_CACHE_KEY = 'jv-github-data';
-const GITHUB_CACHE_DURATION = 1000 * 60 * 30; // 30 minutes
-
-async function loadGitHubData() {
-    // Check cache first
-    const cached = localStorage.getItem(GITHUB_CACHE_KEY);
-    if (cached) {
-        const { data, timestamp } = JSON.parse(cached);
-        if (Date.now() - timestamp < GITHUB_CACHE_DURATION) {
-            renderGitHubData(data);
-            return;
-        }
-    }
-
-    try {
-        // Fetch user data and repos in parallel
-        const [userRes, reposRes] = await Promise.all([
-            fetch(`https://api.github.com/users/${GITHUB_USERNAME}`),
-            fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`)
-        ]);
-
-        if (!userRes.ok || !reposRes.ok) throw new Error('GitHub API error');
-
-        const user = await userRes.json();
-        const repos = await reposRes.json();
-
-        // Calculate total stars
-        const totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
-
-        const data = {
-            user,
-            repos,
-            totalStars
-        };
-
-        // Cache the data
-        localStorage.setItem(GITHUB_CACHE_KEY, JSON.stringify({
-            data,
-            timestamp: Date.now()
-        }));
-
-        renderGitHubData(data);
-    } catch (error) {
-        console.error('Failed to load GitHub data:', error);
-        document.getElementById('github-repos-grid').innerHTML =
-            '<p style="text-align: center; color: var(--color-text-muted);">Unable to load GitHub data</p>';
-    }
-}
-
-function renderGitHubData(data) {
-    const { user, repos, totalStars } = data;
-
-    // Update stats
-    document.getElementById('github-repos').textContent = user.public_repos;
-    document.getElementById('github-stars').textContent = totalStars;
-    document.getElementById('github-followers').textContent = user.followers;
-
-    // Language colors
-    const langColors = {
-        'JavaScript': '#f1e05a',
-        'TypeScript': '#3178c6',
-        'Python': '#3572A5',
-        'HTML': '#e34c26',
-        'CSS': '#563d7c',
-        'Shell': '#89e051',
-        'Java': '#b07219',
-        'Go': '#00ADD8',
-        'Rust': '#dea584',
-        'SQL': '#e38c00'
-    };
-
-    // Render repo cards
-    const reposGrid = document.getElementById('github-repos-grid');
-    reposGrid.innerHTML = repos
-        .filter(repo => !repo.fork) // Only show non-forked repos
-        .slice(0, 6)
-        .map(repo => `
-            <a href="${repo.html_url}" target="_blank" class="github-repo-card">
-                <h4>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    ${repo.name}
-                </h4>
-                <p>${repo.description || 'No description available'}</p>
-                <div class="github-repo-meta">
-                    ${repo.language ? `
-                        <span>
-                            <span class="github-repo-lang" style="background: ${langColors[repo.language] || '#ccc'}"></span>
-                            ${repo.language}
-                        </span>
-                    ` : ''}
-                    <span>⭐ ${repo.stargazers_count}</span>
-                    <span>🍴 ${repo.forks_count}</span>
-                </div>
-            </a>
-        `).join('');
-}
-
-function showGitHubSkeleton() {
-    const reposGrid = document.getElementById('github-repos-grid');
-    if (reposGrid) {
-        reposGrid.innerHTML = Array(6).fill('').map(() => `
-            <div class="github-repo-card skeleton-card">
-                <div class="skeleton skeleton-title"></div>
-                <div class="skeleton skeleton-text"></div>
-                <div class="skeleton skeleton-text short"></div>
-                <div class="skeleton skeleton-meta"></div>
-            </div>
-        `).join('');
-    }
-    ['github-repos', 'github-stars', 'github-followers'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.innerHTML = '<span class="skeleton skeleton-number"></span>';
-    });
-}
-
-// Load GitHub data on page load
-document.addEventListener('DOMContentLoaded', () => {
-    showGitHubSkeleton();
-    loadGitHubData();
-});
