@@ -1036,7 +1036,7 @@ const siteData = {
                 {
                     title: 'JARVIS — Building a Brazilian AI Personal Assistant from Scratch',
                     excerpt: 'How I built a complete AI personal assistant from scratch — persistent memory, multi-model support (GPT, Claude, Gemini) and WhatsApp integration. From idea to production.',
-                    date: 'Nov 2025',
+                    date: 'Jan 2026',
                     readTime: 5,
                     tags: ['AI Product', 'LLMs', 'Product Development'],
                     url: 'https://www.linkedin.com/posts/mrtinsjoao_jarvis-assistente-ia-pessoal-brasileiro-activity-7425920359025197056-ecOv',
@@ -1080,7 +1080,7 @@ const siteData = {
                 {
                     title: 'JARVIS — Construindo um Assistente de IA Pessoal Brasileiro do Zero',
                     excerpt: 'Como construí um assistente de IA pessoal do zero — memória persistente, suporte multi-modelo (GPT, Claude, Gemini) e integração com WhatsApp. Da ideia à produção.',
-                    date: 'Nov 2025',
+                    date: 'Jan 2026',
                     readTime: 5,
                     tags: ['Produto de IA', 'LLMs', 'Desenvolvimento de Produto'],
                     url: 'https://www.linkedin.com/posts/mrtinsjoao_jarvis-assistente-ia-pessoal-brasileiro-activity-7425920359025197056-ecOv',
@@ -1124,7 +1124,7 @@ const siteData = {
                 {
                     title: 'JARVIS — Construyendo un Asistente IA Personal Brasileño desde Cero',
                     excerpt: 'Cómo construí un asistente IA personal desde cero — memoria persistente, soporte multi-modelo (GPT, Claude, Gemini) e integración con WhatsApp. De la idea a la producción.',
-                    date: 'Nov 2025',
+                    date: 'Jan 2026',
                     readTime: 5,
                     tags: ['Producto IA', 'LLMs', 'Desarrollo de Producto'],
                     url: 'https://www.linkedin.com/posts/mrtinsjoao_jarvis-assistente-ia-pessoal-brasileiro-activity-7425920359025197056-ecOv',
