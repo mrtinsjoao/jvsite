@@ -399,26 +399,34 @@ function renderProjects() {
         lakehouse: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>`,
         pipeline: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>`,
         bi: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`,
-        governance: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`
+        governance: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>`,
+        ai: `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>`
     };
 
     if (grid) {
         grid.innerHTML = data.items
-            .map(project => `
-                <article class="project-card">
-                    <div class="project-icon">
-                        ${icons[project.icon] || icons.lakehouse}
-                    </div>
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                    <div class="project-tags">
-                        ${project.tags.map(tag => `<span>${tag}</span>`).join('')}
-                    </div>
-                    <div class="project-result">
-                        <strong>${data.resultLabel}</strong> ${project.result}
-                    </div>
-                </article>
-            `)
+            .map(project => {
+                const el = project.url ? 'a' : 'article';
+                const linkAttr = project.url ? `href="${project.url}" target="_blank" rel="noopener noreferrer"` : '';
+                const featuredClass = project.badge ? ' project-featured' : '';
+                return `
+                    <${el} class="project-card${featuredClass}" ${linkAttr}>
+                        ${project.badge ? `<span class="project-badge">${project.badge}</span>` : ''}
+                        <div class="project-icon">
+                            ${icons[project.icon] || icons.lakehouse}
+                        </div>
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <div class="project-tags">
+                            ${project.tags.map(t => `<span>${t}</span>`).join('')}
+                        </div>
+                        <div class="project-result">
+                            <strong>${data.resultLabel}</strong> ${project.result}
+                        </div>
+                        ${project.url ? `<div class="project-link">${data.viewProject || 'View →'}</div>` : ''}
+                    </${el}>
+                `;
+            })
             .join('');
     }
 }

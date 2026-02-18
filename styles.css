@@ -790,6 +790,39 @@ ul {
     color: var(--color-accent);
 }
 
+.project-card.project-featured {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 1px var(--color-accent), 0 8px 32px rgba(59, 130, 246, 0.12);
+    position: relative;
+}
+
+.project-badge {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: var(--color-accent);
+    color: #fff;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+a.project-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-link {
+    margin-top: 1rem;
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
 /* --------------------------------------------------------------------------
    Work Together Section
    -------------------------------------------------------------------------- */

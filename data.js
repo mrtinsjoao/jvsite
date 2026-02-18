@@ -581,7 +581,17 @@ const siteData = {
             title: 'Projects',
             subtitle: 'Key projects delivered and measurable results achieved',
             resultLabel: 'Result:',
+            viewProject: 'View Product →',
             items: [
+                {
+                    icon: 'ai',
+                    title: 'JARVIS — AI Personal Assistant',
+                    description: 'Built a complete AI product from scratch: persistent memory across conversations, multi-model support (GPT, Claude, Gemini), document uploads and WhatsApp integration. A solution I can replicate and customize for any company.',
+                    tags: ['AI Product', 'LLMs', 'Python', 'WhatsApp'],
+                    result: 'Production product live — replicable for enterprise',
+                    url: 'https://www.usejarvis.app',
+                    badge: 'Live Product'
+                },
                 {
                     icon: 'lakehouse',
                     title: 'Global Data Platform - Snowflake',
@@ -630,7 +640,17 @@ const siteData = {
             title: 'Projetos',
             subtitle: 'Principais projetos entregues e resultados mensuráveis alcançados',
             resultLabel: 'Resultado:',
+            viewProject: 'Ver Produto →',
             items: [
+                {
+                    icon: 'ai',
+                    title: 'JARVIS — Assistente de IA Pessoal',
+                    description: 'Construí um produto de IA completo do zero: memória persistente entre conversas, suporte multi-modelo (GPT, Claude, Gemini), upload de documentos e integração com WhatsApp. Uma solução que posso replicar e personalizar para qualquer empresa.',
+                    tags: ['Produto de IA', 'LLMs', 'Python', 'WhatsApp'],
+                    result: 'Produto em produção — replicável para o enterprise',
+                    url: 'https://www.usejarvis.app',
+                    badge: 'Produto Live'
+                },
                 {
                     icon: 'lakehouse',
                     title: 'Plataforma Global de Dados - Snowflake',
@@ -680,7 +700,17 @@ const siteData = {
             title: 'Proyectos',
             subtitle: 'Principales proyectos entregados y resultados medibles alcanzados',
             resultLabel: 'Resultado:',
+            viewProject: 'Ver Producto →',
             items: [
+                {
+                    icon: 'ai',
+                    title: 'JARVIS — Asistente IA Personal',
+                    description: 'Construí un producto de IA completo desde cero: memoria persistente entre conversaciones, soporte multi-modelo (GPT, Claude, Gemini), carga de documentos e integración con WhatsApp. Una solución que puedo replicar y personalizar para cualquier empresa.',
+                    tags: ['Producto IA', 'LLMs', 'Python', 'WhatsApp'],
+                    result: 'Producto en producción — replicable para enterprise',
+                    url: 'https://www.usejarvis.app',
+                    badge: 'Live Product'
+                },
                 {
                     icon: 'lakehouse',
                     title: 'Plataforma Global de Datos - Snowflake',
@@ -992,6 +1022,15 @@ const siteData = {
             readTime: 'min read',
             articles: [
                 {
+                    title: 'JARVIS — Building a Brazilian AI Personal Assistant from Scratch',
+                    excerpt: 'How I built a complete AI product with persistent memory, multi-model support (GPT, Claude, Gemini) and WhatsApp integration — and how this same solution can be deployed inside any company.',
+                    date: 'Nov 2025',
+                    readTime: 5,
+                    tags: ['AI Product', 'LLMs', 'Product Development'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_jarvis-assistente-ia-pessoal-brasileiro-activity-7425920359025197056-ecOv',
+                    icon: 'article'
+                },
+                {
                     title: 'Using Dataflows for Cost Reduction and Governance',
                     excerpt: 'How I leverage Microsoft Dataflows to centralize queries, reduce costs on Databricks/Snowflake, and enable governance with reusable data layers.',
                     date: 'Aug 2025',
@@ -1027,6 +1066,15 @@ const siteData = {
             readTime: 'min de leitura',
             articles: [
                 {
+                    title: 'JARVIS — Construindo um Assistente de IA Pessoal Brasileiro do Zero',
+                    excerpt: 'Como construí um produto de IA completo com memória persistente, suporte multi-modelo (GPT, Claude, Gemini) e integração com WhatsApp — e como essa mesma solução pode ser implantada dentro de qualquer empresa.',
+                    date: 'Nov 2025',
+                    readTime: 5,
+                    tags: ['Produto de IA', 'LLMs', 'Desenvolvimento de Produto'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_jarvis-assistente-ia-pessoal-brasileiro-activity-7425920359025197056-ecOv',
+                    icon: 'article'
+                },
+                {
                     title: 'Usando Dataflows para Redução de Custos e Governança',
                     excerpt: 'Como uso Microsoft Dataflows para centralizar queries, reduzir custos no Databricks/Snowflake e habilitar governança com camadas de dados reutilizáveis.',
                     date: 'Ago 2025',
@@ -1061,6 +1109,15 @@ const siteData = {
             comingSoon: '¡Más artículos próximamente!',
             readTime: 'min de lectura',
             articles: [
+                {
+                    title: 'JARVIS — Construyendo un Asistente IA Personal Brasileño desde Cero',
+                    excerpt: 'Cómo construí un producto de IA completo con memoria persistente, soporte multi-modelo (GPT, Claude, Gemini) e integración con WhatsApp — y cómo esta misma solución puede desplegarse dentro de cualquier empresa.',
+                    date: 'Nov 2025',
+                    readTime: 5,
+                    tags: ['Producto IA', 'LLMs', 'Desarrollo de Producto'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_jarvis-assistente-ia-pessoal-brasileiro-activity-7425920359025197056-ecOv',
+                    icon: 'article'
+                },
                 {
                     title: 'Usando Dataflows para Reducción de Costos y Gobernanza',
                     excerpt: 'Cómo uso Microsoft Dataflows para centralizar queries, reducir costos en Databricks/Snowflake y habilitar gobernanza con capas de datos reutilizables.',
