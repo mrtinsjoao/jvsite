@@ -141,6 +141,10 @@ const siteData = {
                 cloudTools: {
                     title: 'Cloud & Tools',
                     items: ['AWS', 'GCP', 'Snowflake', 'Alteryx', 'SAP BW/4HANA', 'Oracle']
+                },
+                aiLlm: {
+                    title: 'AI & LLM',
+                    items: ['OpenAI API', 'Claude API', 'Gemini API', 'LLM Integration', 'AI Product Development', 'RAG Systems']
                 }
             }
         },
@@ -176,6 +180,10 @@ const siteData = {
                 cloudTools: {
                     title: 'Cloud & Tools',
                     items: ['AWS', 'GCP', 'Snowflake', 'Alteryx', 'SAP BW/4HANA', 'Oracle']
+                },
+                aiLlm: {
+                    title: 'AI & LLM',
+                    items: ['OpenAI API', 'Claude API', 'Gemini API', 'LLM Integration', 'Desenvolvimento de Produto IA', 'Sistemas RAG']
                 }
             }
         },
@@ -211,6 +219,10 @@ const siteData = {
                 cloudTools: {
                     title: 'Cloud & Tools',
                     items: ['AWS', 'GCP', 'Snowflake', 'Alteryx', 'SAP BW/4HANA', 'Oracle']
+                },
+                aiLlm: {
+                    title: 'AI & LLM',
+                    items: ['OpenAI API', 'Claude API', 'Gemini API', 'Integración LLM', 'Desarrollo de Producto IA', 'Sistemas RAG']
                 }
             }
         }
@@ -586,9 +598,9 @@ const siteData = {
                 {
                     icon: 'ai',
                     title: 'JARVIS — AI Personal Assistant',
-                    description: 'Built a complete AI product from scratch: persistent memory across conversations, multi-model support (GPT, Claude, Gemini), document uploads and WhatsApp integration. A solution I can replicate and customize for any company.',
+                    description: 'A complete AI personal assistant with persistent memory across conversations, multi-model support (GPT, Claude, Gemini), document uploads and WhatsApp integration. Built from scratch and live in production.',
                     tags: ['AI Product', 'LLMs', 'Python', 'WhatsApp'],
-                    result: 'Production product live — replicable for enterprise',
+                    result: 'Try it free at usejarvis.app',
                     url: 'https://www.usejarvis.app',
                     badge: 'Live Product'
                 },
@@ -645,9 +657,9 @@ const siteData = {
                 {
                     icon: 'ai',
                     title: 'JARVIS — Assistente de IA Pessoal',
-                    description: 'Construí um produto de IA completo do zero: memória persistente entre conversas, suporte multi-modelo (GPT, Claude, Gemini), upload de documentos e integração com WhatsApp. Uma solução que posso replicar e personalizar para qualquer empresa.',
+                    description: 'Assistente de IA pessoal com memória persistente entre conversas, suporte multi-modelo (GPT, Claude, Gemini), upload de documentos e integração com WhatsApp. Construído do zero e em produção.',
                     tags: ['Produto de IA', 'LLMs', 'Python', 'WhatsApp'],
-                    result: 'Produto em produção — replicável para o enterprise',
+                    result: 'Experimente grátis em usejarvis.app',
                     url: 'https://www.usejarvis.app',
                     badge: 'Produto Live'
                 },
@@ -705,9 +717,9 @@ const siteData = {
                 {
                     icon: 'ai',
                     title: 'JARVIS — Asistente IA Personal',
-                    description: 'Construí un producto de IA completo desde cero: memoria persistente entre conversaciones, soporte multi-modelo (GPT, Claude, Gemini), carga de documentos e integración con WhatsApp. Una solución que puedo replicar y personalizar para cualquier empresa.',
+                    description: 'Asistente IA personal con memoria persistente entre conversaciones, soporte multi-modelo (GPT, Claude, Gemini), carga de documentos e integración con WhatsApp. Construido desde cero y en producción.',
                     tags: ['Producto IA', 'LLMs', 'Python', 'WhatsApp'],
-                    result: 'Producto en producción — replicable para enterprise',
+                    result: 'Pruébalo gratis en usejarvis.app',
                     url: 'https://www.usejarvis.app',
                     badge: 'Live Product'
                 },
@@ -1023,7 +1035,7 @@ const siteData = {
             articles: [
                 {
                     title: 'JARVIS — Building a Brazilian AI Personal Assistant from Scratch',
-                    excerpt: 'How I built a complete AI product with persistent memory, multi-model support (GPT, Claude, Gemini) and WhatsApp integration — and how this same solution can be deployed inside any company.',
+                    excerpt: 'How I built a complete AI personal assistant from scratch — persistent memory, multi-model support (GPT, Claude, Gemini) and WhatsApp integration. From idea to production.',
                     date: 'Nov 2025',
                     readTime: 5,
                     tags: ['AI Product', 'LLMs', 'Product Development'],
@@ -1067,7 +1079,7 @@ const siteData = {
             articles: [
                 {
                     title: 'JARVIS — Construindo um Assistente de IA Pessoal Brasileiro do Zero',
-                    excerpt: 'Como construí um produto de IA completo com memória persistente, suporte multi-modelo (GPT, Claude, Gemini) e integração com WhatsApp — e como essa mesma solução pode ser implantada dentro de qualquer empresa.',
+                    excerpt: 'Como construí um assistente de IA pessoal do zero — memória persistente, suporte multi-modelo (GPT, Claude, Gemini) e integração com WhatsApp. Da ideia à produção.',
                     date: 'Nov 2025',
                     readTime: 5,
                     tags: ['Produto de IA', 'LLMs', 'Desenvolvimento de Produto'],
@@ -1111,7 +1123,7 @@ const siteData = {
             articles: [
                 {
                     title: 'JARVIS — Construyendo un Asistente IA Personal Brasileño desde Cero',
-                    excerpt: 'Cómo construí un producto de IA completo con memoria persistente, soporte multi-modelo (GPT, Claude, Gemini) e integración con WhatsApp — y cómo esta misma solución puede desplegarse dentro de cualquier empresa.',
+                    excerpt: 'Cómo construí un asistente IA personal desde cero — memoria persistente, soporte multi-modelo (GPT, Claude, Gemini) e integración con WhatsApp. De la idea a la producción.',
                     date: 'Nov 2025',
                     readTime: 5,
                     tags: ['Producto IA', 'LLMs', 'Desarrollo de Producto'],
