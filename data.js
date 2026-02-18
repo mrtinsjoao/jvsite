@@ -115,6 +115,7 @@ const siteData = {
             paragraphs: [
                 "I've been working with data for over <strong>10 years</strong>, and if you take a closer look at my profile, you'll find a wide range of valuable experience across different industries - from healthcare and pharma to automotive and manufacturing.",
                 "I'm passionate about solving problems and delivering practical solutions to various challenges. Currently, I work as <strong>Lead Data Engineer at Medtronic</strong> (USA) and also run my own consulting company, <strong>DadosNow</strong>, where I help companies transform their data into competitive advantage.",
+                "Beyond data infrastructure, I also build AI-powered products. <strong>JARVIS</strong> is a live example — an AI personal assistant with persistent memory, multi-model support (GPT, Claude, Gemini) and WhatsApp integration, built entirely from scratch. I believe the future of data engineering is inseparable from AI — and I'm already building it.",
                 "My expertise spans <strong>Data Architecture</strong>, <strong>Data Engineering</strong>, <strong>BI & Analytics</strong>, and <strong>Cloud Solutions</strong>. I've worked with companies like Novartis, Hospital Sírio-Libanês, Shoulder, Embraer, Ford, and Fleury.",
                 "I hold a <strong>Master in Data Science and AI</strong> from Sirius Educação (MBA)."
             ],
@@ -154,6 +155,7 @@ const siteData = {
             paragraphs: [
                 "Trabalho com dados há mais de <strong>10 anos</strong>, e se você olhar meu perfil de perto, encontrará uma ampla experiência em diferentes indústrias - desde saúde e farmacêutica até automotiva e manufatura.",
                 "Sou apaixonado por resolver problemas e entregar soluções práticas para diversos desafios. Atualmente, trabalho como <strong>Lead Data Engineer na Medtronic</strong> (EUA) e também dirijo minha própria empresa de consultoria, <strong>DadosNow</strong>, onde ajudo empresas a transformar seus dados em vantagem competitiva.",
+                "Além de infraestrutura de dados, também construo produtos com inteligência artificial. O <strong>JARVIS</strong> é uma prova viva disso — um assistente de IA pessoal com memória persistente, suporte multi-modelo (GPT, Claude, Gemini) e integração com WhatsApp, construído do zero. Acredito que o futuro da engenharia de dados é inseparável da IA — e eu já estou construindo isso.",
                 "Minha expertise abrange <strong>Arquitetura de Dados</strong>, <strong>Engenharia de Dados</strong>, <strong>BI & Analytics</strong> e <strong>Soluções Cloud</strong>. Já trabalhei com empresas como Novartis, Hospital Sírio-Libanês, Shoulder, Embraer, Ford e Fleury.",
                 "Possuo <strong>Master in Data Science and AI</strong> pela Sirius Educação (MBA)."
             ],
@@ -193,6 +195,7 @@ const siteData = {
             paragraphs: [
                 "Llevo más de <strong>10 años</strong> trabajando con datos, y si miras mi perfil de cerca, encontrarás una amplia experiencia en diferentes industrias - desde salud y farmacéutica hasta automotriz y manufactura.",
                 "Me apasiona resolver problemas y entregar soluciones prácticas. Actualmente trabajo como <strong>Lead Data Engineer en Medtronic</strong> (EE.UU.) y también dirijo mi propia empresa de consultoría, <strong>DadosNow</strong>, donde ayudo a empresas a transformar sus datos en ventaja competitiva.",
+                "Además de infraestructura de datos, también construyo productos con inteligencia artificial. <strong>JARVIS</strong> es una prueba viva de ello — un asistente IA personal con memoria persistente, soporte multi-modelo (GPT, Claude, Gemini) e integración con WhatsApp, construido desde cero. Creo que el futuro de la ingeniería de datos es inseparable de la IA — y ya lo estoy construyendo.",
                 "Mi experiencia abarca <strong>Arquitectura de Datos</strong>, <strong>Ingeniería de Datos</strong>, <strong>BI & Analytics</strong> y <strong>Soluciones Cloud</strong>. He trabajado con empresas como Novartis, Hospital Sírio-Libanês, Shoulder, Embraer, Ford y Fleury.",
                 "Tengo un <strong>Master in Data Science and AI</strong> de Sirius Educação (MBA)."
             ],
