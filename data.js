@@ -141,6 +141,10 @@ const siteData = {
                 cloudTools: {
                     title: 'Cloud & Tools',
                     items: ['AWS', 'GCP', 'Snowflake', 'Alteryx', 'SAP BW/4HANA', 'Oracle']
+                },
+                aiLlm: {
+                    title: 'AI & LLM',
+                    items: ['OpenAI API', 'Claude API', 'Gemini API', 'LLM Integration', 'AI Product Development', 'RAG Systems']
                 }
             }
         },
@@ -176,6 +180,10 @@ const siteData = {
                 cloudTools: {
                     title: 'Cloud & Tools',
                     items: ['AWS', 'GCP', 'Snowflake', 'Alteryx', 'SAP BW/4HANA', 'Oracle']
+                },
+                aiLlm: {
+                    title: 'AI & LLM',
+                    items: ['OpenAI API', 'Claude API', 'Gemini API', 'LLM Integration', 'Desenvolvimento de Produto IA', 'Sistemas RAG']
                 }
             }
         },
@@ -211,6 +219,10 @@ const siteData = {
                 cloudTools: {
                     title: 'Cloud & Tools',
                     items: ['AWS', 'GCP', 'Snowflake', 'Alteryx', 'SAP BW/4HANA', 'Oracle']
+                },
+                aiLlm: {
+                    title: 'AI & LLM',
+                    items: ['OpenAI API', 'Claude API', 'Gemini API', 'Integración LLM', 'Desarrollo de Producto IA', 'Sistemas RAG']
                 }
             }
         }
@@ -581,7 +593,17 @@ const siteData = {
             title: 'Projects',
             subtitle: 'Key projects delivered and measurable results achieved',
             resultLabel: 'Result:',
+            viewProject: 'View Product →',
             items: [
+                {
+                    icon: 'ai',
+                    title: 'JARVIS — AI Personal Assistant',
+                    description: 'A complete AI personal assistant with persistent memory across conversations, multi-model support (GPT, Claude, Gemini), document uploads and WhatsApp integration. Built from scratch and live in production.',
+                    tags: ['AI Product', 'LLMs', 'Python', 'WhatsApp'],
+                    result: 'Try it free at usejarvis.app',
+                    url: 'https://www.usejarvis.app',
+                    badge: 'Live Product'
+                },
                 {
                     icon: 'lakehouse',
                     title: 'Global Data Platform - Snowflake',
@@ -630,7 +652,17 @@ const siteData = {
             title: 'Projetos',
             subtitle: 'Principais projetos entregues e resultados mensuráveis alcançados',
             resultLabel: 'Resultado:',
+            viewProject: 'Ver Produto →',
             items: [
+                {
+                    icon: 'ai',
+                    title: 'JARVIS — Assistente de IA Pessoal',
+                    description: 'Assistente de IA pessoal com memória persistente entre conversas, suporte multi-modelo (GPT, Claude, Gemini), upload de documentos e integração com WhatsApp. Construído do zero e em produção.',
+                    tags: ['Produto de IA', 'LLMs', 'Python', 'WhatsApp'],
+                    result: 'Experimente grátis em usejarvis.app',
+                    url: 'https://www.usejarvis.app',
+                    badge: 'Produto Live'
+                },
                 {
                     icon: 'lakehouse',
                     title: 'Plataforma Global de Dados - Snowflake',
@@ -680,7 +712,17 @@ const siteData = {
             title: 'Proyectos',
             subtitle: 'Principales proyectos entregados y resultados medibles alcanzados',
             resultLabel: 'Resultado:',
+            viewProject: 'Ver Producto →',
             items: [
+                {
+                    icon: 'ai',
+                    title: 'JARVIS — Asistente IA Personal',
+                    description: 'Asistente IA personal con memoria persistente entre conversaciones, soporte multi-modelo (GPT, Claude, Gemini), carga de documentos e integración con WhatsApp. Construido desde cero y en producción.',
+                    tags: ['Producto IA', 'LLMs', 'Python', 'WhatsApp'],
+                    result: 'Pruébalo gratis en usejarvis.app',
+                    url: 'https://www.usejarvis.app',
+                    badge: 'Live Product'
+                },
                 {
                     icon: 'lakehouse',
                     title: 'Plataforma Global de Datos - Snowflake',
@@ -992,6 +1034,15 @@ const siteData = {
             readTime: 'min read',
             articles: [
                 {
+                    title: 'JARVIS — Building a Brazilian AI Personal Assistant from Scratch',
+                    excerpt: 'How I built a complete AI personal assistant from scratch — persistent memory, multi-model support (GPT, Claude, Gemini) and WhatsApp integration. From idea to production.',
+                    date: 'Nov 2025',
+                    readTime: 5,
+                    tags: ['AI Product', 'LLMs', 'Product Development'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_jarvis-assistente-ia-pessoal-brasileiro-activity-7425920359025197056-ecOv',
+                    icon: 'article'
+                },
+                {
                     title: 'Using Dataflows for Cost Reduction and Governance',
                     excerpt: 'How I leverage Microsoft Dataflows to centralize queries, reduce costs on Databricks/Snowflake, and enable governance with reusable data layers.',
                     date: 'Aug 2025',
@@ -1027,6 +1078,15 @@ const siteData = {
             readTime: 'min de leitura',
             articles: [
                 {
+                    title: 'JARVIS — Construindo um Assistente de IA Pessoal Brasileiro do Zero',
+                    excerpt: 'Como construí um assistente de IA pessoal do zero — memória persistente, suporte multi-modelo (GPT, Claude, Gemini) e integração com WhatsApp. Da ideia à produção.',
+                    date: 'Nov 2025',
+                    readTime: 5,
+                    tags: ['Produto de IA', 'LLMs', 'Desenvolvimento de Produto'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_jarvis-assistente-ia-pessoal-brasileiro-activity-7425920359025197056-ecOv',
+                    icon: 'article'
+                },
+                {
                     title: 'Usando Dataflows para Redução de Custos e Governança',
                     excerpt: 'Como uso Microsoft Dataflows para centralizar queries, reduzir custos no Databricks/Snowflake e habilitar governança com camadas de dados reutilizáveis.',
                     date: 'Ago 2025',
@@ -1061,6 +1121,15 @@ const siteData = {
             comingSoon: '¡Más artículos próximamente!',
             readTime: 'min de lectura',
             articles: [
+                {
+                    title: 'JARVIS — Construyendo un Asistente IA Personal Brasileño desde Cero',
+                    excerpt: 'Cómo construí un asistente IA personal desde cero — memoria persistente, soporte multi-modelo (GPT, Claude, Gemini) e integración con WhatsApp. De la idea a la producción.',
+                    date: 'Nov 2025',
+                    readTime: 5,
+                    tags: ['Producto IA', 'LLMs', 'Desarrollo de Producto'],
+                    url: 'https://www.linkedin.com/posts/mrtinsjoao_jarvis-assistente-ia-pessoal-brasileiro-activity-7425920359025197056-ecOv',
+                    icon: 'article'
+                },
                 {
                     title: 'Usando Dataflows para Reducción de Costos y Gobernanza',
                     excerpt: 'Cómo uso Microsoft Dataflows para centralizar queries, reducir costos en Databricks/Snowflake y habilitar gobernanza con capas de datos reutilizables.',
